@@ -138,13 +138,13 @@ const Main = () => {
             )}
             <div className="flex pt-2 gap-2 justify-center items-center">
               <img
-                src="avatar.png"
+                src="@favicon.png"
                 alt="avatar"
                 className="md:hidden w-12 h-12 rounded-full"
               />
               <p>
                 To:
-                <span className="text-white"> Luis</span>
+                <span className="text-white"> Luis Chacon</span>
               </p>
             </div>
           </div>

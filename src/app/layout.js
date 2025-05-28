@@ -9,12 +9,12 @@ const openSans = Open_Sans({
 });
 
 export const metadata = {
-  title: "Jacob Fu",
-  description: "Jacob's Personal Website",
+  title: "Luis Chacon",
+  description: "Luis's Personal Website",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
-    shortcut: "/logo.png",
+    icon: "@favicon.png",
+    apple: "@favicon.png",
+    shortcut: "@favicon.png",
   },
 };
 

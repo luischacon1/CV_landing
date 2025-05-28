@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const BlueMessage = ({
-  message = "Hi this is a sample message by Jacob Fu. Here we will talk about a lot of different things like how I love eating food etc etc.",
+  message = "Hi this is a sample message by Luis Chacon. Here we will talk about a lot of different things like how I love eating food etc etc.",
   children,
 }) => {
   return (

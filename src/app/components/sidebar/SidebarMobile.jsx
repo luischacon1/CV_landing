@@ -17,7 +17,7 @@ const SidebarMobile = () => {
         <div className="h-12 w-full bg-lsecondary text-txt rounded-lg h-12 p-2 flex gap-2 text-md items-center">
           <FaSearch size={20} />
           <h1 className="bg-lsecondary w-full">
-            Welcome to Jacob Fu's Portfolio!
+            Welcome to Luis Chacon's Portfolio!
           </h1>
         </div>
       </div>

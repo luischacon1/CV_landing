@@ -3,7 +3,7 @@ const testAPI = async () => {
   try {
     console.log('🧪 Probando API de chat...');
     
-    const response = await fetch('http://localhost:3001/api/chat', {
+    const response = await fetch('http://localhost:3000/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
