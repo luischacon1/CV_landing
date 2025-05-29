@@ -86,21 +86,21 @@ const ProjectsMessages = () => {
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="w-32 mx-auto">
           <a href="https://www.instagram.com/_skillhunting/" target="_blank" rel="noopener noreferrer" className="block">
-            <img src="portfolio/luis/skhh.png" alt="skhh.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+            <img src="/portfolio/luis/skhh.png" alt="skhh.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
           </a>
         </div>
       </GrayMessage>
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="w-32 mx-auto">
           <a href="https://x.com/Luis_fchacon/status/1923236041680433613" target="_blank" rel="noopener noreferrer" className="block">
-            <img src="portfolio/luis/apex.svg" alt="apex.svg" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+            <img src="/portfolio/luis/apex.svg" alt="apex.svg" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
           </a>
         </div>
       </GrayMessage>
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="w-32 mx-auto">
           <a href="https://youtu.be/OkPpSbBkhBw?si=toPjL2sUHCBciFne&t=2353" target="_blank" rel="noopener noreferrer" className="block">
-            <img src="portfolio/luis/ns.png" alt="ns.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+            <img src="/portfolio/luis/ns.png" alt="ns.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
           </a>
         </div>
       </GrayMessage>
@@ -111,7 +111,7 @@ const ProjectsMessages = () => {
       />
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="w-32 mx-auto">
-          <img src="portfolio/luis/in.png" alt="in.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+          <img src="/portfolio/luis/in.png" alt="in.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
         </div>
       </GrayMessage>
       <GrayMessage

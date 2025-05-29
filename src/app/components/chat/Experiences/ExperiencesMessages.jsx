@@ -28,7 +28,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/iconblanco.png" alt="icon music business school" className="w-10" />
+              <img src="/portfolio/luis/iconblanco.png" alt="icon music business school" className="w-10" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">ICON Music Business School</p>
                 <p className="text-sm font-bold italic">Co-Founder - CEO</p>
@@ -60,7 +60,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/in.png" alt="inedito podcast" className="w-10" />
+              <img src="/portfolio/luis/in.png" alt="inedito podcast" className="w-10" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">Inédito Podcast</p>
                 <p className="text-sm font-bold italic">Host - Content Strategist</p>
@@ -92,7 +92,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/white_hub.png" alt="Xs experience" className="w-16" />
+              <img src="/portfolio/luis/white_hub.png" alt="Xs experience" className="w-16" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">Influence Hub</p>
                 <p className="text-sm font-bold italic">Influencer Marketer</p>
@@ -124,7 +124,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/ns.png" alt="Xs experience" className="w-16" />
+              <img src="/portfolio/luis/ns.png" alt="Xs experience" className="w-16" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">No Suspires</p>
                 <p className="text-sm font-bold italic">Head of event production</p>
@@ -155,7 +155,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/elevate.png" alt="artist boosting" className="w-10" />
+              <img src="/portfolio/luis/elevate.png" alt="artist boosting" className="w-10" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">Artist Boosting</p>
                 <p className="text-sm font-bold italic">Growth - Ops Lead</p>
@@ -187,7 +187,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/skhh.png" alt="skill hunting" className="w-16" />
+              <img src="/portfolio/luis/skhh.png" alt="skill hunting" className="w-16" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">Skill Hunting</p>
                 <p className="text-sm font-bold italic">Co-Founder - Business Development Lead</p>
@@ -219,7 +219,7 @@ const ExperiencesMessages = () => {
             viewport={{ once: true }}
           >
             <div className="flex flex-row gap-4 items-center">
-              <img src="portfolio/luis/spine.png" alt="spine consulting" className="w-18" />
+              <img src="/portfolio/luis/spine.png" alt="spine consulting" className="w-18" />
               <div className="flex flex-col">
                 <p className="font-black text-lg">Spine Consulting</p>
                 <p className="text-sm font-bold italic">Account Executive</p>
