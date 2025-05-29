@@ -1,6 +1,7 @@
 import { Nunito as Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ModalImageProvider } from "./components/ModalImageContext";
+import ModalImage from "./components/ModalImage";
 // import AnimatedBackground from "./components/AnimatedBackground";
 
 const openSans = Open_Sans({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         {/* <AnimatedBackground /> */}
         <ModalImageProvider>
           {children}
+          <ModalImage />
         </ModalImageProvider>
       </body>
     </html>

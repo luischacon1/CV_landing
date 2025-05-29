@@ -29,7 +29,7 @@ const ContactMessages = () => {
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         you can also find me on {" "}
         <a
-          href="www.linkedin.com/in/luisfernandezchacon"
+          href="https://linkedin.com/in/luisfernandezchacon"
           target="_blank"
           rel="noopener noreferrer"
           className="text-iblue underline"

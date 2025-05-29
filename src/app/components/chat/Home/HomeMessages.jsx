@@ -83,7 +83,7 @@ const HomeMessages = () => {
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         or check me out at other stuff like{" "}
         <a
-          href="https://www.linkedin.com/in/luis-fernandez-chacon/"
+          href="https://linkedin.com/in/luisfernandezchacon"
           target="_blank"
           rel="noopener noreferrer"
           className="text-iblue underline"
