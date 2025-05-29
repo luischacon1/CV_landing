@@ -56,6 +56,9 @@ const AboutMessages = () => {
               className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
+              onError={(e) => {
+                console.error(`Failed to load image: /portfolio/luis/${img}`);
+              }}
             />
           ))}
         </div>
