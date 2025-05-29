@@ -12,9 +12,9 @@ export const metadata = {
   title: "Luis Chacon",
   description: "Luis's Personal Website",
   icons: {
-    icon: "@favicon.png",
-    apple: "@favicon.png",
-    shortcut: "@favicon.png",
+    icon: "@luis.png",
+    apple: "@luis.png",
+    shortcut: "@luis.png",
   },
 };
 
