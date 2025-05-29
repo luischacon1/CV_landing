@@ -49,7 +49,7 @@ const AboutMessages = () => {
       />
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="flex gap-2">
-          {["posh.jpg", "feria.jpg"].map((img) => (
+          {["posh.png", "feria.png"].map((img) => (
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
@@ -186,7 +186,7 @@ const AboutMessages = () => {
       />
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="flex gap-2">
-          {["plane.jpg", "spider.jpg"].map((img) => (
+          {["plane.png", "spider.jpg"].map((img) => (
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
