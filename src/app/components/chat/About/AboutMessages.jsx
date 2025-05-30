@@ -33,7 +33,7 @@ const AboutMessages = () => {
               <img
                 key={img}
                 src={`/portfolio/luis/${img}`}
-                className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+                className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
                 alt={img}
                 onClick={() => setModalImg(`/portfolio/luis/${img}`)}
               />
@@ -56,7 +56,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
               onError={(e) => {
@@ -86,7 +86,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -108,7 +108,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -135,7 +135,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -162,7 +162,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -189,7 +189,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -211,7 +211,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -256,7 +256,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />
@@ -278,7 +278,7 @@ const AboutMessages = () => {
             <img
               key={img}
               src={`/portfolio/luis/${img}`}
-              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-105"
+              className="object-cover aspect-square rounded-xl flex-1 min-w-0 cursor-pointer transition-transform hover:scale-[1.02]"
               alt={img}
               onClick={() => setModalImg(`/portfolio/luis/${img}`)}
             />

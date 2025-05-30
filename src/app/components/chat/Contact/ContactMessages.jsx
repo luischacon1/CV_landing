@@ -20,13 +20,11 @@ const ContactMessages = () => {
       </GrayMessage>
 
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <div className="overflow-hidden">
-          <img
-            src="/portfolio/luis/end.jpg"
-            className="object-cover rounded-xl h-64 w-64 object-[50%_0%]"
-            alt="picture of me"
-          />
-        </div>{" "}
+        <img
+          src="/portfolio/luis/end.jpg"
+          className="object-cover rounded-xl h-64 w-64 object-[50%_0%] cursor-pointer transition-transform hover:scale-[1.02]"
+          alt="picture of me"
+        />
       </GrayMessage>
 
       <GrayMessage order={(counter += timeGap)} bg="#44484e">

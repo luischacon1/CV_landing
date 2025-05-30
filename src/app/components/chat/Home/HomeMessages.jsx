@@ -1,22 +1,30 @@
+import { useEffect } from "react";
 import GrayMessage from "../GrayMessage";
 import BlueMessage from "../BlueMessage";
 import MessageBar from "../MessageBar";
+import useBackgroundImagePreloader from "../../hooks/useBackgroundImagePreloader";
+import portfolioImages from "../../../utils/imageUrls";
 
 const HomeMessages = () => {
   let counter = 1;
   const timeGap = 3;
+  
+  // Start background image preloading when component mounts
+  const { isPreloading, preloadComplete, progress } = useBackgroundImagePreloader(
+    portfolioImages, 
+    true // Start immediately
+  );
+
   return (
     <>
       <GrayMessage message="hi there 👋" order={(counter += timeGap)} bg="#44484e" />
       <GrayMessage message="it's luis here" order={(counter += timeGap)} bg="#44484e" />
 
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <div className="overflow-hidden">
-          <img
-            src="/portfolio/luis/perfilsonrie.png"
-            className="w-56 h-56 rounded-3xl object-[100%_50%] object-cover"
-          />
-        </div>
+        <img
+          src="/portfolio/luis/perfilsonrie.png"
+          className="w-56 h-56 rounded-3xl object-[100%_50%] object-cover cursor-pointer transition-transform hover:scale-[1.02]"
+        />
       </GrayMessage>
 
       <GrayMessage

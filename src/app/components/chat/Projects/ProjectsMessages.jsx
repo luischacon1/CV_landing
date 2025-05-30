@@ -84,81 +84,81 @@ const ProjectsMessages = () => {
   return (
     <>
       <div className="w-full max-w-[55rem]">
-        <GrayMessage
-          message="here's some things i've worked on"
-          order={(counter += timeGap)}
-          bg="#44484e"
-        />
+      <GrayMessage
+        message="here's some things i've worked on"
+        order={(counter += timeGap)}
+        bg="#44484e"
+      />
       </div>
 
       {/* Proyectos principales */}
       <div className="w-full max-w-[55rem]">
-        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+      <GrayMessage order={(counter += timeGap)} bg="#44484e">
           <div className="w-32 max-w-[8rem] mx-auto">
-            <a href="https://www.instagram.com/_skillhunting/" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://www.instagram.com/_skillhunting/" target="_blank" rel="noopener noreferrer" className="block">
               <img src="/portfolio/luis/skhh.png" alt="skhh.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-            </a>
-          </div>
-        </GrayMessage>
+          </a>
+        </div>
+      </GrayMessage>
       </div>
       <div className="w-full max-w-[55rem]">
-        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+      <GrayMessage order={(counter += timeGap)} bg="#44484e">
           <div className="w-32 max-w-[8rem] mx-auto">
-            <a href="https://x.com/Luis_fchacon/status/1923236041680433613" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://x.com/Luis_fchacon/status/1923236041680433613" target="_blank" rel="noopener noreferrer" className="block">
               <img src="/portfolio/luis/apex.svg" alt="apex.svg" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-            </a>
-          </div>
-        </GrayMessage>
+          </a>
+        </div>
+      </GrayMessage>
       </div>
       <div className="w-full max-w-[55rem]">
-        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+      <GrayMessage order={(counter += timeGap)} bg="#44484e">
           <div className="w-32 max-w-[8rem] mx-auto">
-            <a href="https://youtu.be/OkPpSbBkhBw?si=toPjL2sUHCBciFne&t=2353" target="_blank" rel="noopener noreferrer" className="block">
+          <a href="https://youtu.be/OkPpSbBkhBw?si=toPjL2sUHCBciFne&t=2353" target="_blank" rel="noopener noreferrer" className="block">
               <img src="/portfolio/luis/ns.png" alt="ns.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-            </a>
-          </div>
-        </GrayMessage>
+          </a>
+        </div>
+      </GrayMessage>
       </div>
 
       {/* Separación grande entre proyectos principales y podcast */}
       <div className="h-80" />
 
       <div className="w-full max-w-[55rem]">
-        <GrayMessage
-          message="And of course Inedito podcast"
-          order={(counter += timeGap)}
-          bg="#44484e"
-        />
+      <GrayMessage
+        message="And of course Inedito podcast"
+        order={(counter += timeGap)}
+        bg="#44484e"
+      />
       </div>
       <div className="w-full max-w-[55rem]">
-        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+      <GrayMessage order={(counter += timeGap)} bg="#44484e">
           <div className="w-32 max-w-[8rem] mx-auto">
             <img src="/portfolio/luis/in.png" alt="in.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-          </div>
-        </GrayMessage>
+        </div>
+      </GrayMessage>
       </div>
 
       {/* Separación entre podcast y episodios favoritos */}
       <div className="h-20" />
 
       <div className="w-full max-w-[55rem]">
-        <GrayMessage
-          message="fav episodes ⤵️⤵️"
-          order={(counter += timeGap)}
-          bg="#34cb5c"
-        />
+      <GrayMessage
+        message="fav episodes ⤵️⤵️"
+        order={(counter += timeGap)}
+        bg="#34cb5c"
+      />
       </div>
       <div className="w-full max-w-[55rem]">
-        <GrayMessage order={(counter += timeGap)} bg="#44484e">
-          <ul className="list-disc pl-6 space-y-2">
+      <GrayMessage order={(counter += timeGap)} bg="#44484e">
+        <ul className="list-disc pl-6 space-y-2">
             <li><YouTubePreviewLink url="https://youtu.be/YNAptmPaGHk">USA Ambassador to Spain</YouTubePreviewLink></li>
             <li><YouTubePreviewLink url="https://youtu.be/MyKKtZf5z1w">President of Oracle</YouTubePreviewLink></li>
-            <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=mUqx8NFBc54&t=31s">President of EY</YouTubePreviewLink></li>
+          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=mUqx8NFBc54&t=31s">President of EY</YouTubePreviewLink></li>
             <li><YouTubePreviewLink url="https://youtu.be/WlExGqbMFc8">Carlos Latre</YouTubePreviewLink></li>
             <li><YouTubePreviewLink url="https://youtu.be/qcpKCOL25JE">La Hormiga del Hormiguero</YouTubePreviewLink></li>
             <li><YouTubePreviewLink url="https://youtu.be/NvEtVel-upc">Belén Esteban</YouTubePreviewLink></li>
-          </ul>
-        </GrayMessage>
+        </ul>
+      </GrayMessage>
       </div>
     </>
   );

@@ -6,7 +6,7 @@ const Pinned = () => {
       {/* Search Bar */}
       <div className="mb-8">
         <div className="bg-lsecondary text-txt rounded-lg h-12 px-4 py-3 flex gap-3 text-base items-center">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A7A7A6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A7A7A6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="11" cy="11" r="8"/>
             <path d="m21 21-4.35-4.35"/>
           </svg>
@@ -88,12 +88,12 @@ const Pinned = () => {
             className="flex justify-center items-center bg-gray-500 w-16 h-16 p-3 rounded-full shimmer-resume \
             transition-all duration-300 ease-in-out transform hover:scale-110 hover:rotate-6"
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
               <polyline points="14,2 14,8 20,8"/>
               <line x1="16" y1="13" x2="8" y2="13"/>
               <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10,9 9,9 8,9"/>
+              <line x1="10" y1="9" x2="8" y2="9"/>
             </svg>
           </a>
           <h3 className="text-sm text-txt font-medium">Resume</h3>

@@ -148,7 +148,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="text-white px-4 py-2 flex flex-col justify-start gap-1 w-full h-96 grow overflow-y-auto bg-primary pb-20 md:pb-4" style={{ scrollBehavior: 'smooth' }}>
+      <div className="text-white px-4 py-2 flex flex-col justify-start gap-1 w-full h-96 grow overflow-y-auto bg-primary pb-24" style={{ scrollBehavior: 'smooth' }}>
         <h1 className="text-xs text-txt text-center mb-4">iMessage</h1>
         {renderMessages()}
         {messagesBySection[pageOpen]?.map((msg, index) =>

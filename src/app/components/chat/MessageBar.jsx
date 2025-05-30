@@ -40,7 +40,7 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-primary fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto z-[100] flex gap-3 w-full p-4 justify-center items-center md:rounded-br-2xl border-t border-lsecondary md:border-t-0"
+      className="fixed bottom-0 left-0 right-0 md:left-1/3 z-[100] flex gap-3 w-full md:w-2/3 p-4 justify-center items-center border-t border-lsecondary md:border-t-0 bg-primary"
       style={{ minHeight: '60px' }}
     >
       {/* Camera/Plus Button - Apple style */}
