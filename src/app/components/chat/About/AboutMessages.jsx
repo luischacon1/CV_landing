@@ -6,7 +6,7 @@ import { useModalImage } from "../../ModalImageContext";
 const AboutMessages = () => {
   const { modalImg, setModalImg } = useModalImage();
   let counter = 1;
-  const timeGap = 2;
+  const timeGap = 1;
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -41,7 +41,10 @@ const AboutMessages = () => {
           </div>
         </GrayMessage>
       </div>
-      <div className="h-64" />
+      
+      {/* Separación grande entre familia y mascotas */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="and of course them ❤️"
         order={(counter += timeGap)}
@@ -63,7 +66,10 @@ const AboutMessages = () => {
           ))}
         </div>
       </GrayMessage>
-      <div style={{ height: "50px" }} />
+      
+      {/* Separación grande entre mascotas y deportes */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="Pics say it all… wait for it."
         order={(counter += timeGap)}
@@ -87,7 +93,10 @@ const AboutMessages = () => {
           ))}
         </div>
       </GrayMessage>
-      <div style={{ height: "50px" }} />
+      
+      {/* Separación grande entre deportes y hackathon */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="first time pitching ; ) Ngl, I've put on some weight since then."
         order={(counter += timeGap)}
@@ -111,7 +120,10 @@ const AboutMessages = () => {
         order={(counter += timeGap)}
         bg="#44484e"
       />
-      <div style={{ height: "50px" }} />
+      
+      {/* Separación grande entre hackathon y SKH */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="This was SKH I event. Huge day."
         order={(counter += timeGap)}
@@ -135,7 +147,10 @@ const AboutMessages = () => {
         order={(counter += timeGap)}
         bg="#44484e"
       />
-      <div style={{ height: "50px" }} />
+      
+      {/* Separación grande entre SKH y Parlamento Europeo */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="📍 European parliament - got invited to speak on youth entrepreneurship."
         order={(counter += timeGap)}
@@ -159,7 +174,10 @@ const AboutMessages = () => {
         order={(counter += timeGap)}
         bg="#44484e"
       />
-      <div className="h-20" />
+      
+      {/* Separación grande entre Parlamento y charlas en institutos */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="i also give talks in high schools"
         order={(counter += timeGap)}
@@ -178,7 +196,10 @@ const AboutMessages = () => {
           ))}
         </div>
       </GrayMessage>
-      <div className="h-64" />
+      
+      {/* Separación grande entre charlas y Hawaii */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="moments before jumping off a plane in Hawaii 🪂🪂"
         order={(counter += timeGap)}
@@ -197,7 +218,10 @@ const AboutMessages = () => {
           ))}
         </div>
       </GrayMessage>
-      <div className="h-64" />
+      
+      {/* Separación grande entre Hawaii y No Suspires */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="✌🏼 ran a workshop at No Suspires camp — vibes were high."
         order={(counter += timeGap)}
@@ -217,7 +241,10 @@ const AboutMessages = () => {
         order={(counter += timeGap)}
         bg="#44484e"
       />
-      <div className="h-64" />
+      
+      {/* Separación grande entre No Suspires y Latin Grammys */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="Made it to the Latin Grammys — filming ICON mentors in Miami 🔥"
         order={(counter += timeGap)}
@@ -236,7 +263,10 @@ const AboutMessages = () => {
           ))}
         </div>
       </GrayMessage>
-      <div className="h-64" />
+      
+      {/* Separación grande entre Latin Grammys y Silicon Valley */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="Touched base at Meta & Google HQ in Silicon Valley . Dream checked ✅"
         order={(counter += timeGap)}
@@ -255,7 +285,10 @@ const AboutMessages = () => {
           ))}
         </div>        
       </GrayMessage>
-      <div className="h-64" />
+      
+      {/* Separación grande entre Silicon Valley y Los Angeles */}
+      <div className="h-80" />
+      
       <GrayMessage 
         message="And studied in Los Angeles for a year. What a experience!🤯"
         order={(counter += timeGap)}
@@ -284,7 +317,10 @@ const AboutMessages = () => {
           </a>
         </div>
       </GrayMessage>
-      <div className="h-64" />
+      
+      {/* Separación grande antes del final */}
+      <div className="h-80" />
+      
       <GrayMessage
         message="but yeahh, that's it"
         order={(counter += timeGap)}

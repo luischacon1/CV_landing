@@ -16,7 +16,7 @@ export default function Home() {
             backgroundPosition: "100% 40%", // X = 20%, Y = 50%
           }}
         >
-          <main className="flex md:w-1/2 flex-row md:h-full h-screen shadow-2xl">
+          <main className="flex w-full md:w-1/2 flex-row md:h-full h-screen shadow-2xl">
             <Sidebar />
             <Main />
           </main>

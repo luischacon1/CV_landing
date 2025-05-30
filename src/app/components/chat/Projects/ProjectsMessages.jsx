@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GrayMessage from "../GrayMessage";
 import BlueMessage from "../BlueMessage";
 import projects from "../../../data/portfolio.js"; // Import your projects array
@@ -73,62 +73,93 @@ const YouTubePreviewLink = ({ url, children }) => {
 };
 
 const ProjectsMessages = () => {
-  let counter = 1;
-  const timeGap = 2;
+  let counter = 0;
+  const timeGap = 1;
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
-      <GrayMessage
-        message="here's some things i've worked on"
-        order={(counter += timeGap)}
-        bg="#44484e"
-      />
-      <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <div className="w-32 mx-auto">
-          <a href="https://www.instagram.com/_skillhunting/" target="_blank" rel="noopener noreferrer" className="block">
-            <img src="/portfolio/luis/skhh.png" alt="skhh.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-          </a>
-        </div>
-      </GrayMessage>
-      <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <div className="w-32 mx-auto">
-          <a href="https://x.com/Luis_fchacon/status/1923236041680433613" target="_blank" rel="noopener noreferrer" className="block">
-            <img src="/portfolio/luis/apex.svg" alt="apex.svg" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-          </a>
-        </div>
-      </GrayMessage>
-      <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <div className="w-32 mx-auto">
-          <a href="https://youtu.be/OkPpSbBkhBw?si=toPjL2sUHCBciFne&t=2353" target="_blank" rel="noopener noreferrer" className="block">
-            <img src="/portfolio/luis/ns.png" alt="ns.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-          </a>
-        </div>
-      </GrayMessage>
-      <GrayMessage
-        message="And of course Inedito podcast"
-        order={(counter += timeGap)}
-        bg="#44484e"
-      />
-      <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <div className="w-32 mx-auto">
-          <img src="/portfolio/luis/in.png" alt="in.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
-        </div>
-      </GrayMessage>
-      <GrayMessage
-        message="fav episodes ⤵️⤵️"
-        order={(counter += timeGap)}
-        bg="#34cb5c"
-      />
-      <GrayMessage order={(counter += timeGap)} bg="#44484e">
-        <ul className="list-disc pl-6 space-y-2">
-          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=YNAptmPaGHk&list=PLpTZ1Ji32zWkJ-C4WBSZ5aK9siBUkgi9c&index=12">USA Ambassador to Spain</YouTubePreviewLink></li>
-          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=MyKKtZf5z1w&t=18s">President of Oracle</YouTubePreviewLink></li>
-          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=mUqx8NFBc54&t=31s">President of EY</YouTubePreviewLink></li>
-          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=WlExGqbMFc8">Carlos Latre</YouTubePreviewLink></li>
-          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=qcpKCOL25JE&t=6s">La Hormiga del Hormiguero</YouTubePreviewLink></li>
-          <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=NvEtVel-upc">Belén Esteban</YouTubePreviewLink></li>
-        </ul>
-      </GrayMessage>
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage
+          message="here's some things i've worked on"
+          order={(counter += timeGap)}
+          bg="#44484e"
+        />
+      </div>
+
+      {/* Proyectos principales */}
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+          <div className="w-32 max-w-[8rem] mx-auto">
+            <a href="https://www.instagram.com/_skillhunting/" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="/portfolio/luis/skhh.png" alt="skhh.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+            </a>
+          </div>
+        </GrayMessage>
+      </div>
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+          <div className="w-32 max-w-[8rem] mx-auto">
+            <a href="https://x.com/Luis_fchacon/status/1923236041680433613" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="/portfolio/luis/apex.svg" alt="apex.svg" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+            </a>
+          </div>
+        </GrayMessage>
+      </div>
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+          <div className="w-32 max-w-[8rem] mx-auto">
+            <a href="https://youtu.be/OkPpSbBkhBw?si=toPjL2sUHCBciFne&t=2353" target="_blank" rel="noopener noreferrer" className="block">
+              <img src="/portfolio/luis/ns.png" alt="ns.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+            </a>
+          </div>
+        </GrayMessage>
+      </div>
+
+      {/* Separación grande entre proyectos principales y podcast */}
+      <div className="h-80" />
+
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage
+          message="And of course Inedito podcast"
+          order={(counter += timeGap)}
+          bg="#44484e"
+        />
+      </div>
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+          <div className="w-32 max-w-[8rem] mx-auto">
+            <img src="/portfolio/luis/in.png" alt="in.png" className="w-full rounded-lg object-cover cursor-pointer transition-transform hover:scale-105" />
+          </div>
+        </GrayMessage>
+      </div>
+
+      {/* Separación entre podcast y episodios favoritos */}
+      <div className="h-20" />
+
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage
+          message="fav episodes ⤵️⤵️"
+          order={(counter += timeGap)}
+          bg="#34cb5c"
+        />
+      </div>
+      <div className="w-full max-w-[55rem]">
+        <GrayMessage order={(counter += timeGap)} bg="#44484e">
+          <ul className="list-disc pl-6 space-y-2">
+            <li><YouTubePreviewLink url="https://youtu.be/YNAptmPaGHk">USA Ambassador to Spain</YouTubePreviewLink></li>
+            <li><YouTubePreviewLink url="https://youtu.be/MyKKtZf5z1w">President of Oracle</YouTubePreviewLink></li>
+            <li><YouTubePreviewLink url="https://www.youtube.com/watch?v=mUqx8NFBc54&t=31s">President of EY</YouTubePreviewLink></li>
+            <li><YouTubePreviewLink url="https://youtu.be/WlExGqbMFc8">Carlos Latre</YouTubePreviewLink></li>
+            <li><YouTubePreviewLink url="https://youtu.be/qcpKCOL25JE">La Hormiga del Hormiguero</YouTubePreviewLink></li>
+            <li><YouTubePreviewLink url="https://youtu.be/NvEtVel-upc">Belén Esteban</YouTubePreviewLink></li>
+          </ul>
+        </GrayMessage>
+      </div>
     </>
   );
 };

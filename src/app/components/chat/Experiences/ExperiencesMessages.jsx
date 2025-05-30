@@ -2,16 +2,15 @@ import { motion } from "framer-motion";
 import GrayMessage from "../GrayMessage";
 
 const ExperiencesMessages = () => {
-  let index = 1;
   let counter = 1;
-  const timeGap = 2;
+  const timeGap = 1;
   return (
     <>
       {/* ICON Music Business School */}
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter) * 0.2 }}
       >
         <h1 className="text-xs text-txt text-center">Jun 2024 – present</h1>
       </motion.div>
@@ -22,10 +21,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/iconblanco.png" alt="icon music business school" className="w-10" />
@@ -42,7 +40,7 @@ const ExperiencesMessages = () => {
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter += timeGap) * 0.2 }}
       >
         <h3 className="text-xs text-txt text-center">Sep 2023 – present</h3>
       </motion.div>
@@ -54,10 +52,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/in.png" alt="inedito podcast" className="w-10" />
@@ -74,7 +71,7 @@ const ExperiencesMessages = () => {
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter += timeGap) * 0.2 }}
       >
         <h3 className="text-xs text-txt text-center">Jun 2024 – Jan 2025</h3>
       </motion.div>
@@ -86,10 +83,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/white_hub.png" alt="Xs experience" className="w-16" />
@@ -106,7 +102,7 @@ const ExperiencesMessages = () => {
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter += timeGap) * 0.2 }}
       >
         <h3 className="text-xs text-txt text-center">August 2024</h3>
       </motion.div>
@@ -118,10 +114,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/ns.png" alt="Xs experience" className="w-16" />
@@ -138,7 +133,7 @@ const ExperiencesMessages = () => {
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter += timeGap) * 0.2 }}
       >
         <h3 className="text-xs text-txt text-center">Dec 2023 – Jul 2024</h3>
       </motion.div>
@@ -149,10 +144,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/elevate.png" alt="artist boosting" className="w-10" />
@@ -169,7 +163,7 @@ const ExperiencesMessages = () => {
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter += timeGap) * 0.2 }}
       >
         <h3 className="text-xs text-txt text-center">Nov 2022 – Sep 2024</h3>
       </motion.div>
@@ -181,10 +175,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/skhh.png" alt="skill hunting" className="w-16" />
@@ -201,7 +194,7 @@ const ExperiencesMessages = () => {
       <motion.div
         initial={{ scale: 0.5, opacity: 0, y: 10 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 150, damping: 15, delay: 0.2 * counter }}
+        transition={{ type: "spring", stiffness: 150, damping: 15, delay: (counter += timeGap) * 0.2 }}
       >
         <h3 className="text-xs text-txt text-center">Oct 2022 – Sep 2023</h3>
       </motion.div>
@@ -213,10 +206,9 @@ const ExperiencesMessages = () => {
       >
         <GrayMessage bg="#44484e" order={(counter += timeGap)}>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 * index++ }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: counter * 0.2 + 0.2, duration: 0.3 }}
           >
             <div className="flex flex-row gap-4 items-center">
               <img src="/portfolio/luis/spine.png" alt="spine consulting" className="w-18" />

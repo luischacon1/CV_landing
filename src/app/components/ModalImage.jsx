@@ -67,7 +67,7 @@ const ModalImage = () => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[90] p-4 backdrop-blur-sm"
+      className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-[90] p-4"
       onClick={() => setModalImg(null)}
     >
       <div 
@@ -99,7 +99,7 @@ const ModalImage = () => {
         {/* Close button */}
         <button
           onClick={() => setModalImg(null)}
-          className="absolute top-3 right-3 text-white bg-black bg-opacity-60 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-80 transition-all duration-200 backdrop-blur-sm"
+          className="absolute top-3 right-3 text-white bg-black bg-opacity-60 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-80 transition-all duration-200"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>

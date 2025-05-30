@@ -4,11 +4,10 @@ import MessageBar from "../MessageBar";
 
 const HomeMessages = () => {
   let counter = 1;
-  const timeGap = 2;
+  const timeGap = 1;
   return (
     <>
       <GrayMessage message="hi there 👋" order={(counter += timeGap)} bg="#44484e" />
-
       <GrayMessage message="it's luis here" order={(counter += timeGap)} bg="#44484e" />
 
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
@@ -19,6 +18,8 @@ const HomeMessages = () => {
           />
         </div>
       </GrayMessage>
+
+      <div className="h-20" />
 
       <GrayMessage
         message="i'm currently"
@@ -69,6 +70,9 @@ const HomeMessages = () => {
           </li>
         </ul>
       </GrayMessage>
+
+      <div className="h-20" />
+
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         email me at{" "}
         <a
@@ -79,7 +83,6 @@ const HomeMessages = () => {
           fernandez.luis.chacon@gmail.com
         </a>
       </GrayMessage>
-
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         or check me out at other stuff like{" "}
         <a
@@ -100,6 +103,9 @@ const HomeMessages = () => {
           GitHub
         </a>
       </GrayMessage>
+
+      <div className="h-16" />
+
       <GrayMessage
         message="if you ever want to talk, just send me a message through the message bar 😉"
         order={(counter += timeGap)}

@@ -10,7 +10,6 @@ import BlogMessages from "./Blog/BlogMessages";
 import { useState, useContext, useEffect, useRef } from "react";
 import { AppContext } from "../sidebar/AppContext";
 import ContactMessages from "./Contact/ContactMessages";
-import { FaArrowLeft } from "react-icons/fa6";
 import SidebarMobile from "../sidebar/SidebarMobile";
 import {motion} from "framer-motion";
 import { useModalImage } from "../ModalImageContext";
@@ -125,39 +124,38 @@ const Main = () => {
 
   return (
     <section className="w-full md:w-2/3 flex flex-col h-full md:h-auto md:rounded-tr-2xl md:rounded-br-2xl">
-      <div className="fixed relative top-0 right-0 bg-secondary/95 md:rounded-tr-2xl p-4">
+      <div className="fixed relative top-0 right-0 bg-secondary md:rounded-tr-2xl p-4 border-b border-lsecondary md:border-b-0">
         <div className="flex w-full items-center gap-2 text-txt text-sm">
-          <div className="md:hidden flex w-full justify-center items-center">
-            <button onClick={() => setMenuOpen(!menuOpen)} className="">
-              <FaArrowLeft size={40} className="fixed left-6 top-6" />
+          <div className="md:hidden flex w-full justify-center items-center relative">
+            <button 
+              onClick={() => setMenuOpen(!menuOpen)} 
+              className="absolute left-0 p-2 rounded-full transition-all duration-200 hover:bg-lsecondary active:scale-95"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15,18 9,12 15,6"/>
+              </svg>
             </button>
             {menuOpen && (
               <div className="fixed absolute top-2 left-0 z-[50]">
                 <SidebarMobile />
               </div>
             )}
-            <div className="flex pt-2 gap-2 justify-center items-center">
-              <img
-                src="@luis.png"
-                alt="avatar"
-                className="md:hidden w-12 h-12 rounded-full"
-              />
-              <p>
-                To:
-                <span className="text-white"> Luis Chacon</span>
+            <div className="flex items-center justify-center">
+              <p className="text-white text-lg font-medium">
+                get to know me better
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="text-white p-4 flex flex-col justify-start gap-2 w-full h-96 grow overflow-y-auto bg-primary">
-        <h1 className="text-xs text-txt text-center">iMessage</h1>
+      <div className="text-white px-4 py-2 flex flex-col justify-start gap-1 w-full h-96 grow overflow-y-auto bg-primary pb-20 md:pb-4" style={{ scrollBehavior: 'smooth' }}>
+        <h1 className="text-xs text-txt text-center mb-4">iMessage</h1>
         {renderMessages()}
         {messagesBySection[pageOpen]?.map((msg, index) =>
           msg.type === "blue" ? (
-            <BlueMessage key={index} message={msg.text} />
+            <BlueMessage key={index} message={msg.text} order={index + 100} />
           ) : (
-            <GrayMessage key={index} message={msg.text} bg="#44484e" />
+            <GrayMessage key={index} message={msg.text} bg="#44484e" order={index + 100} />
           )
         )}
         {isLoading && (
@@ -165,8 +163,9 @@ const Main = () => {
             initial={{ scale: 0.5, opacity: 0, y: 10 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 150, damping: 15 }}
+            className="ml-0 mb-1"
           >
-            <div className="flex items-center justify-center bg-secondary w-12 py-1 rounded-3xl items-center gap-1 text-gray-400 text-2xl">
+            <div className="flex items-center justify-center bg-secondary w-16 py-2 rounded-[18px] rounded-bl-[4px] items-center gap-1 text-gray-400 text-lg shadow-lg">
               <div className="animate-bounce">•</div>
               <div className="animate-bounce delay-100">•</div>
               <div className="animate-bounce delay-200">•</div>
@@ -175,7 +174,7 @@ const Main = () => {
         )}
         <div ref={messagesEndRef} />
       </div>
-      {!modalImg && <MessageBar onSendMessage={handleSendMessage} isLoading={isLoading} />}
+      <MessageBar onSendMessage={handleSendMessage} isLoading={isLoading} />
     </section>
   );
 };
