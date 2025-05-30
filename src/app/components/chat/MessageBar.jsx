@@ -55,6 +55,11 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
       </button>
       
       <div className="flex-1 bg-lsecondary text-white flex items-center rounded-[20px] min-h-[36px] px-4 py-2 border-2 border-transparent focus-within:border-iblue transition-all duration-200">
+        {!message && !isLoading && (
+          <div className="mr-1">
+            <div className="w-0.5 h-4 bg-iblue animate-blink"></div>
+          </div>
+        )}
         <input
           type="text"
           placeholder={isLoading ? "Luis is typing..." : "ask me anything..."}
@@ -64,11 +69,6 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
           className="bg-transparent w-full outline-none shimmer-placeholder disabled:opacity-50 text-white placeholder-gray-400"
           style={{ fontSize: '16px', lineHeight: '1.4' }}
         />
-        {!message && !isLoading && (
-          <div className="animate-pulse">
-            <div className="w-0.5 h-4 bg-iblue animate-blink"></div>
-          </div>
-        )}
       </div>
       
       {/* Audio/Voice Button - Standard audio waves icon */}

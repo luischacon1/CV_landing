@@ -21,7 +21,7 @@ const GrayMessage = ({
       style={{ 
         backgroundColor: bg,
         boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1)',
-        fontSize: '16px',
+        fontSize: '22px',
         lineHeight: '1.4'
       }}
     >

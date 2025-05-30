@@ -6,7 +6,7 @@ import { useModalImage } from "../../ModalImageContext";
 const AboutMessages = () => {
   const { modalImg, setModalImg } = useModalImage();
   let counter = 1;
-  const timeGap = 1;
+  const timeGap = 3;
 
   // Scroll to top when component mounts
   useEffect(() => {

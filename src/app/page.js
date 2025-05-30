@@ -1,27 +1,47 @@
 "use client";
-import { useState, createContext } from "react";
-import Main from "./components/chat/Main";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/sidebar/Sidebar";
+import Main from "./components/chat/Main";
 import { AppProvider } from "./components/sidebar/AppContext";
+import useImagePreloader from "./components/hooks/useImagePreloader";
+import LoadingScreen from "./components/LoadingScreen";
+import portfolioImages from "./utils/imageUrls";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+  const { imagesLoaded, loadedCount, totalImages } = useImagePreloader(portfolioImages);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <>
-      <AppProvider>
-        <div
-          className="min-h-screen flex items-center justify-center"
-          style={{
-            backgroundImage: "url(/portfolio/luis/sky.jpg)",
-            backgroundSize: "120%",
-            backgroundPosition: "100% 40%", // X = 20%, Y = 50%
-          }}
-        >
-          <main className="flex w-full md:w-1/2 flex-row md:h-full h-screen shadow-2xl">
-            <Sidebar />
+    <AppProvider>
+      <AnimatePresence mode="wait">
+        {!imagesLoaded ? (
+          <LoadingScreen 
+            key="loading"
+            loadedCount={loadedCount} 
+            totalImages={totalImages} 
+          />
+        ) : (
+          <main 
+            key="main"
+            className="flex h-screen w-screen bg-primary overflow-hidden"
+          >
+            {!isMobile && <Sidebar />}
             <Main />
           </main>
-        </div>
-      </AppProvider>
-    </>
+        )}
+      </AnimatePresence>
+    </AppProvider>
   );
 }

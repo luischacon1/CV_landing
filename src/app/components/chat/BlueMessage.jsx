@@ -18,7 +18,7 @@ const BlueMessage = ({
       className="inline-block ml-auto text-white bg-iblue rounded-[18px] rounded-br-[4px] w-fit max-w-[75%] p-3 mb-1 shadow-lg"
       style={{
         boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1)',
-        fontSize: '16px',
+        fontSize: '22px',
         lineHeight: '1.4'
       }}
     >

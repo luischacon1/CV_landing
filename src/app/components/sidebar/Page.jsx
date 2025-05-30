@@ -4,12 +4,13 @@ const Page = ({
   title = "Home",
   tagline = "Welcome and quick introduction",
   type = "home",
+  isSelected = false,
 }) => {
 
   const renderIcon = () => {
     const iconProps = {
-      width: "24",
-      height: "24",
+      width: "40",
+      height: "40",
       viewBox: "0 0 24 24",
       fill: "none",
       stroke: "white",
@@ -72,18 +73,21 @@ const Page = ({
   };
 
   return (
-    <div className="flex flex-row p-3 hover:bg-iblue text-txt transition-all duration-400 hover:text-txtlight rounded-xl">
-      <div className="w-1/5 mr-2">
-        <div className="flex justify-center items-center rounded-full bg-lsecondary w-12 h-12">
+    <div className={`flex flex-row p-6 hover:bg-iblue text-txt transition-all duration-200 hover:text-txtlight rounded-xl ${
+      isSelected ? 'bg-iblue text-txtlight' : ''
+    }`} style={{ minHeight: '100px' }}>
+      <div className="w-1/5 mr-4">
+        <div className="flex justify-center items-center rounded-full bg-lsecondary w-20 h-20">
           {renderIcon()}
         </div>
       </div>
 
-      <div className="flex flex-col w-4/5 h-16 gap-1">
-        <div className="flex w-full justify-between text-sm">
-          <h1 className="font-bold text-white">{title}</h1> <h2>{currDate}</h2>
+      <div className="flex flex-col justify-center w-4/5 h-20 gap-2">
+        <div className="flex w-full justify-between text-xl">
+          <h1 className="font-semibold text-white">{title}</h1> 
+          <h2 className="text-base">{currDate}</h2>
         </div>
-        <p className="text-start text-xs">{tagline}</p>
+        <p className="text-start text-base leading-tight">{tagline}</p>
       </div>
     </div>
   );

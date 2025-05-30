@@ -74,7 +74,7 @@ const YouTubePreviewLink = ({ url, children }) => {
 
 const ProjectsMessages = () => {
   let counter = 0;
-  const timeGap = 1;
+  const timeGap = 3;
 
   // Scroll to top when component mounts
   useEffect(() => {

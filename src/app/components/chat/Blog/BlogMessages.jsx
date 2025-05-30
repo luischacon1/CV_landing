@@ -5,7 +5,7 @@ import experiences from "../../../data/blog";
 
 const BlogMessages = () => {
   let counter = 1;
-  const timeGap = 2;
+  const timeGap = 4;
   return (
     <>
       <GrayMessage

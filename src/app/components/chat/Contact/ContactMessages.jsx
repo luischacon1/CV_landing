@@ -3,7 +3,7 @@ import BlueMessage from "../BlueMessage";
 
 const ContactMessages = () => {
   let counter = 1;
-  const timeGap = 1;
+  const timeGap = 3;
   return (
     <>
       <GrayMessage
@@ -12,16 +12,12 @@ const ContactMessages = () => {
         bg="#44484e"
       />
 
-      <div className="h-16" />
-
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         feel free to email me at {" "}
         <a href="mailto:fernandez.luis.chacon@gmail.com" className="text-iblue underline">
           fernandez.luis.chacon@gmail.com
         </a>
       </GrayMessage>
-
-      <div className="h-20" />
 
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         <div className="overflow-hidden">
@@ -32,8 +28,6 @@ const ContactMessages = () => {
           />
         </div>{" "}
       </GrayMessage>
-
-      <div className="h-20" />
 
       <GrayMessage order={(counter += timeGap)} bg="#44484e">
         you can also find me on {" "}
@@ -57,8 +51,6 @@ const ContactMessages = () => {
           GitHub
         </a>
       </GrayMessage>
-
-      <div className="h-16" />
 
       <GrayMessage order={(counter += timeGap)} message="i'd love to chat!" bg="#34cb5c" />
       <GrayMessage order={(counter += timeGap)} message="😊" bg="#34cb5c"/>

@@ -3,7 +3,7 @@ import GrayMessage from "../GrayMessage";
 
 const ExperiencesMessages = () => {
   let counter = 1;
-  const timeGap = 1;
+  const timeGap = 3;
   return (
     <>
       {/* ICON Music Business School */}
