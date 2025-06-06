@@ -6,7 +6,8 @@ const GrayMessage = ({
   bg = "lsecondary",
   customStyle = "",
   order=1,
-  isAIResponse = false
+  isAIResponse = false,
+  isJSX = false
 }) => {
   // Remove delays for AI responses, keep them for preset messages
   const animationDelay = isAIResponse ? 0 : order * 0.2;
@@ -43,14 +44,16 @@ const GrayMessage = ({
         }}
       >
         {children ? children : (
-          <div style={{ 
-            whiteSpace: 'pre-line',
-            wordWrap: 'break-word',
-            overflowWrap: 'break-word',
-            maxWidth: '100%'
-          }}>
-            {message}
-          </div>
+          isJSX ? message : (
+            <div style={{ 
+              whiteSpace: 'pre-line',
+              wordWrap: 'break-word',
+              overflowWrap: 'break-word',
+              maxWidth: '100%'
+            }}>
+              {message}
+            </div>
+          )
         )}
       </motion.div>
     </motion.div>

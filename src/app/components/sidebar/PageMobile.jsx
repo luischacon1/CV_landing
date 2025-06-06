@@ -72,7 +72,7 @@ const Page = ({
 
   return (
     <div 
-      className={`flex flex-row p-4 hover:bg-iblue text-txt transition-all duration-200 hover:text-txtlight rounded-xl active:scale-[0.98] ${
+      className={`flex flex-row p-4 text-txt transition-all duration-200 rounded-xl active:scale-[0.98] ${
         isSelected ? 'bg-iblue text-txtlight' : ''
       }`}
       style={{ minHeight: '80px' }}

@@ -11,7 +11,7 @@ const Pinned = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-lsecondary w-16 h-16 p-2 rounded-full 
-              transition-all duration-200 ease-out transform hover:scale-105 active:scale-95 hover:bg-iblue"
+              transition-all duration-200 ease-out transform active:scale-95"
               style={{ minHeight: '44px', minWidth: '44px' }}
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
@@ -28,7 +28,7 @@ const Pinned = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-lsecondary w-16 h-16 p-2 rounded-full 
-              transition-all duration-200 ease-out transform hover:scale-105 active:scale-95 hover:bg-iblue"
+              transition-all duration-200 ease-out transform active:scale-95"
               style={{ minHeight: '44px', minWidth: '44px' }}
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
@@ -45,7 +45,7 @@ const Pinned = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-center items-center bg-lsecondary w-16 h-16 p-2 rounded-full 
-              transition-all duration-200 ease-out transform hover:scale-105 active:scale-95 hover:bg-iblue"
+              transition-all duration-200 ease-out transform active:scale-95"
               style={{ minHeight: '44px', minWidth: '44px' }}
             >
               <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
@@ -61,7 +61,7 @@ const Pinned = () => {
               href="/portfolio/luis/CV_luis_fernandez.pdf"
               download="CV_luis_fernandez.pdf"
               className="flex justify-center items-center bg-gray-500 w-16 h-16 p-2 rounded-full 
-              transition-all duration-200 ease-out transform hover:scale-105 active:scale-95 hover:bg-gray-600"
+              transition-all duration-200 ease-out transform active:scale-95"
               style={{ minHeight: '44px', minWidth: '44px' }}
             >
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
