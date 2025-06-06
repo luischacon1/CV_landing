@@ -4,7 +4,7 @@ import { useModalImage } from "../ModalImageContext";
 import "./shimmer.css";
 
 const MessageBar = ({ onSendMessage, isLoading }) => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("Why would you be a perfect fit as David Ruidor's personal assistant?");
   const [isMobile, setIsMobile] = useState(false);
   const { pageOpen, menuOpen } = useContext(AppContext);
   const { modalImg } = useModalImage();
@@ -24,8 +24,11 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (message.trim() && !isLoading) {
-      onSendMessage(message);
+      const messageToSend = message.trim();
+      // Clear message immediately for instant feedback
       setMessage("");
+      // Send the message
+      onSendMessage(messageToSend);
     }
   };
 
@@ -67,7 +70,11 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
           onChange={(e) => setMessage(e.target.value)}
           disabled={isLoading}
           className="bg-transparent w-full outline-none shimmer-placeholder disabled:opacity-50 text-white placeholder-gray-400"
-          style={{ fontSize: '16px', lineHeight: '1.4' }}
+          style={{ 
+            fontSize: '16px', 
+            lineHeight: '1.4',
+            caretColor: 'transparent'
+          }}
         />
       </div>
       

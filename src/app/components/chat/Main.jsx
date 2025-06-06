@@ -8,6 +8,7 @@ import HomeMessages from "./Home/HomeMessages";
 import ProjectsMessages from "./Projects/ProjectsMessages";
 import BlogMessages from "./Blog/BlogMessages";
 import { useState, useContext, useEffect, useRef } from "react";
+import { flushSync } from "react-dom";
 import { AppContext } from "../sidebar/AppContext";
 import ContactMessages from "./Contact/ContactMessages";
 import SidebarMobile from "../sidebar/SidebarMobile";
@@ -39,11 +40,42 @@ const Main = () => {
   }, [pageOpen]);
 
   const handleSendMessage = async (text) => {
-    // Add user message
-    setMessagesBySection((prev) => ({
-      ...prev,
-      [pageOpen]: [...prev[pageOpen], { text, type: "blue" }],
-    }));
+    // Immediately add user message with flushSync for instant rendering
+    flushSync(() => {
+      setMessagesBySection((prev) => ({
+        ...prev,
+        [pageOpen]: [...prev[pageOpen], { text, type: "blue" }],
+      }));
+    });
+
+    // Scroll to bottom immediately after adding message
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+
+    // Check if this is the David Ruidor question and respond automatically
+    if (text.trim() === "Why would you be a perfect fit as David Ruidor's personal assistant?") {
+      const predefinedResponse = `Hey! I'm currently studying but my schedule's pretty chill — my own projects don't take up much time right now, so I've got the space and focus to really support someone like David.
+
+I've worked with high-level people before, managed my podcast, teams, and projects, and I'm good at keeping things running smooth while staying on top of details.
+
+People around me often say I'm super resourceful and adapt quickly to new environments — I take pride in figuring things out fast and making stuff work.
+
+Lately I've been going full vibe-coder mode — didn't know how to write a single line 6 months ago but AI and tech have always called me, so I've been diving in hard.
+
+Ideally looking for something remote, part-time, where I can learn from someone top like David ; ) while contributing real value.
+
+If it sounds even half interesting, let me call you for 5 mins and I'll finish convincing you 👀 (644880952)
+
+Also checkout the ABOUT section to know more about me`;
+
+      // Add the predefined response immediately
+      setMessagesBySection((prev) => ({
+        ...prev,
+        [pageOpen]: [...prev[pageOpen], { text: predefinedResponse, type: "gray" }],
+      }));
+      return;
+    }
 
     // Get AI response from serverless function
     setIsLoading(true);
@@ -153,9 +185,20 @@ const Main = () => {
         {renderMessages()}
         {messagesBySection[pageOpen]?.map((msg, index) =>
           msg.type === "blue" ? (
-            <BlueMessage key={index} message={msg.text} order={index + 100} />
+            <BlueMessage 
+              key={index} 
+              message={msg.text} 
+              order={index + 100} 
+              isUserMessage={true}
+            />
           ) : (
-            <GrayMessage key={index} message={msg.text} bg="#44484e" order={index + 100} />
+            <GrayMessage 
+              key={index} 
+              message={msg.text} 
+              bg="#44484e" 
+              order={index + 100} 
+              isAIResponse={true}
+            />
           )
         )}
         {isLoading && (
