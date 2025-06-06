@@ -21,6 +21,17 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  // Check if current message is the default David Ruidor question
+  const isDefaultQuestion = message === "Why would you be a perfect fit as David Ruidor's personal assistant?";
+  
+  // Determine height based on mobile and default question
+  const getMessageBarHeight = () => {
+    if (isMobile && isDefaultQuestion) {
+      return '80px'; // Taller for the long default question on mobile
+    }
+    return '60px'; // Normal height
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (message.trim() && !isLoading) {
@@ -44,7 +55,7 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
     <form
       onSubmit={handleSubmit}
       className="fixed bottom-0 left-0 right-0 md:left-1/3 z-[100] flex gap-3 w-full md:w-2/3 p-4 justify-center items-center border-t border-lsecondary md:border-t-0 bg-primary"
-      style={{ minHeight: '60px' }}
+      style={{ minHeight: getMessageBarHeight() }}
     >
       {/* Camera/Plus Button - Apple style */}
       <button
@@ -57,7 +68,7 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
         </svg>
       </button>
       
-      <div className="flex-1 bg-lsecondary text-white flex items-center rounded-[20px] min-h-[36px] px-4 py-2 border-2 border-transparent focus-within:border-iblue transition-all duration-200">
+      <div className={`flex-1 bg-lsecondary text-white flex items-center rounded-[20px] px-4 py-2 border-2 border-transparent focus-within:border-iblue transition-all duration-200 ${isMobile && isDefaultQuestion ? 'min-h-[48px] items-start pt-3' : 'min-h-[36px] items-center'}`}>
         {!message && !isLoading && (
           <div className="mr-1">
             <div className="w-0.5 h-4 bg-iblue animate-blink"></div>
@@ -73,7 +84,9 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
           style={{ 
             fontSize: '16px', 
             lineHeight: '1.4',
-            caretColor: 'transparent'
+            caretColor: 'transparent',
+            wordWrap: 'break-word',
+            whiteSpace: isMobile && isDefaultQuestion ? 'normal' : 'nowrap'
           }}
         />
       </div>
