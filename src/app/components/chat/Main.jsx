@@ -148,35 +148,21 @@ const Main = () => {
       messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, 0);
 
-    // Check if this is the David Ruidor question and respond automatically
-    if (text.trim() === "Why would you be a perfect fit as David Ruidor's personal assistant?") {
+    // Check if this is the TikTok question and respond automatically
+    if (text.trim() === "Why would you be a perfect fit as a tiktok intern?") {
       const predefinedResponseContent = (
         <div>
-          Hey! I'm currently studying but my schedule's pretty chill — my own projects don't take up much time right now, so I've got the space and focus to really support someone like David.
+          Hey! I just wrapped up an exchange year at the University of California, Irvine, one of the best experiences I've had so far, both personally and professionally. It really pushed me to grow, explore, and think bigger.
           <br/><br/>
-          I've worked with high-level people before, managed my podcast, teams, and projects, and I'm good at keeping things running smooth while staying on top of details.
+          Right now, I'm developing an educational project in the music industry that's set to launch midway through the next academic year. I'm super excited about it! But in the meantime, this summer is looking surprisingly low-key, and honestly, I can't think of a better way to spend it than working at TikTok. I mean... is there a cooler place to grow, learn, and contribute?
           <br/><br/>
-          People around me often say I'm super resourceful and adapt quickly to new environments — I take pride in figuring things out fast and making stuff work.
+          As for me, I'm a pretty chill guy, naturally entrepreneurial, and I genuinely enjoy working, especially when I'm surrounded by smart people who make the process fun and meaningful. Right now I'm actually traveling through Yosemite National Park, wrapping up my time in the U.S. after this incredible year. I even found myself doing a bit of programming at the Visitor Center just for fun. I guess I can't help but get involved wherever I go.
           <br/><br/>
-          Lately I've been going full vibe-coder mode — didn't know how to write a single line 6 months ago but AI and tech have always called me, so I've been diving in hard.
+          I've led small teams, launched creative projects, and worked closely with artists and collaborators. I move fast, adapt quickly, and love using tech (especially AI) to solve problems and build things that work.
           <br/><br/>
-          Ideally looking for something remote, part-time, where I can learn from someone top like David ; ) while contributing real value.
+          I'm looking for an opportunity this summer where I can keep learning and bring real value. The MAI team at TikTok sounds like exactly the kind of environment I'd love to be part of.
           <br/><br/>
-          If it sounds even half interesting, let me call you for 5 mins and I'll finish convincing you 👀 (644880952)
-          <br/><br/>
-          Also checkout the{' '}
-          <span
-            onClick={() => setPageOpen('about')}
-            className="text-blue-500 underline cursor-pointer hover:text-blue-400 transition-colors duration-200"
-            style={{ 
-              textDecorationColor: '#3b82f6',
-              textUnderlineOffset: '2px',
-              fontWeight: 'normal'
-            }}
-          >
-            ABOUT
-          </span>
-          {' '}section to know more about me
+          Hope to connect soon :)
         </div>
       );
 
