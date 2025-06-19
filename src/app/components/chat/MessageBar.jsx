@@ -4,13 +4,13 @@ import { useModalImage } from "../ModalImageContext";
 import "./shimmer.css";
 
 const MessageBar = ({ onSendMessage, isLoading }) => {
-  const [message, setMessage] = useState("Why would you be a perfect fit as David Ruidor's personal assistant?");
+  const [message, setMessage] = useState("Why would you be a perfect fit as a tiktok intern?");
   const [isMobile, setIsMobile] = useState(false);
   const { pageOpen, menuOpen } = useContext(AppContext);
   const { modalImg } = useModalImage();
 
   // Check if it's the default message
-  const isDefaultMessage = message === "Why would you be a perfect fit as David Ruidor's personal assistant?";
+  const isDefaultMessage = message === "Why would you be a perfect fit as a tiktok intern?";
 
   // Check if device is mobile
   useEffect(() => {
@@ -46,9 +46,12 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="fixed bottom-0 left-0 right-0 z-[100] flex gap-2 md:gap-4 w-full p-3 md:p-6 justify-center items-center border-t border-lsecondary md:border-t-0 bg-primary"
+      className="fixed bottom-0 right-0 z-[100] flex gap-2 md:gap-4 p-3 md:p-6 justify-center items-center border-t border-lsecondary md:border-t-0 bg-primary"
       style={{ 
-        minHeight: isDefaultMessage && isMobile ? '120px' : isMobile ? '60px' : '80px'
+        minHeight: isDefaultMessage && isMobile ? '120px' : isMobile ? '60px' : '80px',
+        width: isMobile ? '100%' : '66.67%', // Match the chat area width (w-2/3)
+        left: isMobile ? '0' : 'auto', // Remove left positioning on desktop
+        right: '0' // Keep right alignment
       }}
     >
       {/* Camera/Plus Button - Apple style */}

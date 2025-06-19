@@ -28,7 +28,7 @@ export async function POST(request) {
     const systemPrompt = getSystemPrompt(currentSection);
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: "gpt-3.5-turbo",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: message },
