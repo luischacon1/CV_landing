@@ -176,11 +176,14 @@ const Main = () => {
   };
 
   const handleSendMessage = async (text) => {
+    // Capture the current section at the moment of sending
+    const currentSection = pageOpen;
+    
     // Immediately add user message with flushSync for instant rendering
     flushSync(() => {
       setMessagesBySection((prev) => ({
         ...prev,
-        [pageOpen]: [...prev[pageOpen], { text, type: "blue" }],
+        [currentSection]: [...prev[currentSection], { text, type: "blue" }],
       }));
     });
 
@@ -205,12 +208,12 @@ const Main = () => {
       // Add the predefined response immediately
       setMessagesBySection((prev) => ({
         ...prev,
-        [pageOpen]: [...prev[pageOpen], { text: predefinedResponseContent, type: "gray", isJSX: true }],
+        [currentSection]: [...prev[currentSection], { text: predefinedResponseContent, type: "gray", isJSX: true }],
       }));
 
       // Add a follow-up message after a short delay to invite visiting the About page
       // Only show this if the user is NOT already on the About page
-      if (pageOpen !== 'about') {
+      if (currentSection !== 'about') {
         setTimeout(() => {
           const followUpMessage = (
             <div style={{ textAlign: 'center', fontWeight: '600' }}>
@@ -224,7 +227,7 @@ const Main = () => {
           );
           setMessagesBySection((prev) => ({
             ...prev,
-            [pageOpen]: [...prev[pageOpen], { 
+            [currentSection]: [...prev[currentSection], { 
               text: followUpMessage, 
               type: "gray", 
               isAIResponse: true, 
@@ -242,7 +245,7 @@ const Main = () => {
     // Get AI response from serverless function
     setIsLoading(true);
     try {
-      console.log('Sending message to API:', { text, currentSection: pageOpen });
+      console.log('Sending message to API:', { text, currentSection });
       
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -251,7 +254,7 @@ const Main = () => {
         },
         body: JSON.stringify({
           message: text,
-          currentSection: pageOpen,
+          currentSection: currentSection,
         }),
       });
 
@@ -272,7 +275,7 @@ const Main = () => {
         
         setMessagesBySection((prev) => ({
           ...prev,
-          [pageOpen]: [...prev[pageOpen], { text: errorMessage, type: "gray" }],
+          [currentSection]: [...prev[currentSection], { text: errorMessage, type: "gray" }],
         }));
         return;
       }
@@ -280,14 +283,14 @@ const Main = () => {
       const aiResponseText = data.content;
       setMessagesBySection((prev) => ({
         ...prev,
-        [pageOpen]: [...prev[pageOpen], { text: aiResponseText, type: "gray" }],
+        [currentSection]: [...prev[currentSection], { text: aiResponseText, type: "gray" }],
       }));
     } catch (error) {
       console.error("Error in AI response:", error);
       setMessagesBySection((prev) => ({
         ...prev,
-        [pageOpen]: [
-          ...prev[pageOpen],
+        [currentSection]: [
+          ...prev[currentSection],
           {
             text: "Sorry, I'm having connection issues. Can you try again?",
             type: "gray",
