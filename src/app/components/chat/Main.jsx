@@ -50,10 +50,51 @@ const Main = () => {
     }
   }, [pageOpen]);
 
-  // Scroll to top when page changes
+  // Scroll to top when page changes to see the first message being sent
   useEffect(() => {
+    if (messagesEndRef.current) {
+      const container = messagesEndRef.current.parentElement;
+      if (container) {
+        // Scroll to top immediately when changing sections
+        container.scrollTo({
+          top: 0,
+          behavior: 'instant'
+        });
+      }
+    }
     window.scrollTo(0, 0);
   }, [pageOpen]);
+
+  // Auto-scroll to bottom only when sending/receiving messages (not when changing sections)
+  const prevMessagesLengthRef = useRef(0);
+  
+  useEffect(() => {
+    const currentMessages = messagesBySection[pageOpen] || [];
+    const currentLength = currentMessages.length;
+    const prevLength = prevMessagesLengthRef.current;
+    
+    // Only auto-scroll if messages were added (not on initial section load)
+    if (currentLength > prevLength && prevLength > 0) {
+      const scrollToBottom = () => {
+        if (messagesEndRef.current) {
+          const container = messagesEndRef.current.parentElement;
+          if (container) {
+            // Smooth scroll to bottom without jumps
+            container.scrollTo({
+              top: container.scrollHeight,
+              behavior: 'smooth'
+            });
+          }
+        }
+      };
+      
+      const timeoutId = setTimeout(scrollToBottom, 50);
+      return () => clearTimeout(timeoutId);
+    }
+    
+    // Update the ref for next comparison
+    prevMessagesLengthRef.current = currentLength;
+  }, [messagesBySection[pageOpen], isLoading, pageOpen]);
 
   // Handle touch start
   const onTouchStart = (e) => {
@@ -143,26 +184,21 @@ const Main = () => {
       }));
     });
 
-    // Scroll to bottom immediately after adding message
-    setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 0);
-
-    // Check if this is the TikTok question and respond automatically
-    if (text.trim() === "Why would you be a perfect fit as a tiktok intern?") {
+    // Check if this is the Google question and respond automatically
+    if (text.trim() === "Why would you be a perfect fit for Google?") {
       const predefinedResponseContent = (
         <div>
-          Hey! I just wrapped up an exchange year at the University of California, Irvine, one of the best experiences I've had so far, both personally and professionally. It really pushed me to grow, explore, and think bigger.
+          Hey! I'm currently working as an Account Manager Intern at TikTok Shop in Spain, where I've been managing e-commerce operations and driving performance for SMBs and key merchants in the FMCG and health sectors. In just 2 months, I onboarded over 30 sellers, with several reaching T3-T4 stages in less than a month through data-driven strategies and performance optimization.
           <br/><br/>
-          Right now, I'm developing an educational project in the music industry that's set to launch midway through the next academic year. I'm super excited about it! But in the meantime, this summer is looking surprisingly low-key, and honestly, I can't think of a better way to spend it than working at TikTok. I mean... is there a cooler place to grow, learn, and contribute?
+          This experience has given me hands-on expertise in data analytics, paid media campaigns, conversion optimization, and ROI maximization—skills that directly align with Google's data-driven culture. I've coordinated campaigns, analyzed funnel performance, and conducted in-person visits across Spain to strengthen merchant relationships and ensure continued growth.
           <br/><br/>
-          As for me, I'm a pretty chill guy, naturally entrepreneurial, and I genuinely enjoy working, especially when I'm surrounded by smart people who make the process fun and meaningful. Right now I'm actually traveling through Yosemite National Park, wrapping up my time in the U.S. after this incredible year. I even found myself doing a bit of programming at the Visitor Center just for fun. I guess I can't help but get involved wherever I go.
+          Beyond TikTok, I'm an entrepreneur at heart. I co-founded ICON Music Business School, securing €100K in non-dilutive funding and partnering with Banco Santander and Universidad de Nebrija. I also built Inédito Podcast to 20M+ views and 40K+ subscribers, hosting top executives like the U.S. Ambassador to Spain and CEOs from EY, Oracle, and Scalpers. I love creating products and experiences that scale.
           <br/><br/>
           I've led small teams, launched creative projects, and worked closely with artists and collaborators. I move fast, adapt quickly, and love using tech (especially AI) to solve problems and build things that work.
           <br/><br/>
-          I'm looking for an opportunity this summer where I can keep learning and bring real value. The MAI team at TikTok sounds like exactly the kind of environment I'd love to be part of.
+          I'm passionate about leveraging data and technology to solve complex business problems, and I genuinely believe Google is the place where I can contribute the most while continuing to grow. I'm looking for an opportunity where I can bring my e-commerce experience, entrepreneurial mindset, and technical skills to help build products that matter.
           <br/><br/>
-          Hope to connect soon :)
+          Would love to connect and explore how I can add value to your team!
         </div>
       );
 
@@ -171,6 +207,35 @@ const Main = () => {
         ...prev,
         [pageOpen]: [...prev[pageOpen], { text: predefinedResponseContent, type: "gray", isJSX: true }],
       }));
+
+      // Add a follow-up message after a short delay to invite visiting the About page
+      // Only show this if the user is NOT already on the About page
+      if (pageOpen !== 'about') {
+        setTimeout(() => {
+          const followUpMessage = (
+            <div style={{ textAlign: 'center', fontWeight: '600' }}>
+              <div style={{ fontSize: '18px', marginBottom: '4px' }}>
+                Want to know more about my journey?
+              </div>
+              <div style={{ fontSize: '16px', opacity: 0.95 }}>
+                👉 Click here to check out the About page! 🚀
+              </div>
+            </div>
+          );
+          setMessagesBySection((prev) => ({
+            ...prev,
+            [pageOpen]: [...prev[pageOpen], { 
+              text: followUpMessage, 
+              type: "gray", 
+              isAIResponse: true, 
+              isJSX: true,
+              isClickable: true,
+              onClick: () => setPageOpen('about')
+            }],
+          }));
+        }, 1500); // 1.5 second delay for natural conversation flow
+      }
+
       return;
     }
 
@@ -315,8 +380,12 @@ const Main = () => {
       )}
       
       <div 
-        className="text-white px-4 py-2 flex flex-col justify-start gap-1 w-full h-full grow overflow-y-auto bg-primary pb-24 pt-24 md:pt-2" 
-        style={{ scrollBehavior: 'smooth' }}
+        className="text-white px-4 py-2 flex flex-col justify-start gap-1 w-full h-full grow overflow-y-auto bg-primary pb-28 pt-24 md:pt-2 scroll-smooth" 
+        style={{ 
+          scrollBehavior: 'smooth',
+          scrollPaddingTop: '2rem',
+          scrollPaddingBottom: '1rem'
+        }}
       >
         <h1 className="text-xs text-txt text-center mb-4">iMessage</h1>
         {renderMessages()}
@@ -336,6 +405,8 @@ const Main = () => {
               order={index + 100} 
               isAIResponse={true}
               isJSX={msg.isJSX || false}
+              isClickable={msg.isClickable || false}
+              onClick={msg.onClick || null}
             />
           )
         )}
@@ -353,7 +424,7 @@ const Main = () => {
             </div>
           </motion.div>
         )}
-        <div ref={messagesEndRef} />
+        <div ref={messagesEndRef} style={{ height: '8px' }} />
       </div>
       <MessageBar onSendMessage={handleSendMessage} isLoading={isLoading} />
     </section>

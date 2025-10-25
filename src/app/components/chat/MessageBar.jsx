@@ -4,13 +4,13 @@ import { useModalImage } from "../ModalImageContext";
 import "./shimmer.css";
 
 const MessageBar = ({ onSendMessage, isLoading }) => {
-  const [message, setMessage] = useState("Why would you be a perfect fit as a tiktok intern?");
+  const [message, setMessage] = useState("Why would you be a perfect fit for Google?");
   const [isMobile, setIsMobile] = useState(false);
   const { pageOpen, menuOpen } = useContext(AppContext);
   const { modalImg } = useModalImage();
 
   // Check if it's the default message
-  const isDefaultMessage = message === "Why would you be a perfect fit as a tiktok intern?";
+  const isDefaultMessage = message === "Why would you be a perfect fit for Google?";
 
   // Check if device is mobile
   useEffect(() => {
@@ -46,12 +46,15 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="fixed bottom-0 right-0 z-[100] flex gap-2 md:gap-4 p-3 md:p-6 justify-center items-center border-t border-lsecondary md:border-t-0 bg-primary"
+      className="fixed bottom-0 right-0 z-[100] flex gap-2 md:gap-4 p-3 md:p-6 justify-center items-center border-t border-lsecondary md:border-t-0"
       style={{ 
         minHeight: isDefaultMessage && isMobile ? '120px' : isMobile ? '60px' : '80px',
         width: isMobile ? '100%' : '66.67%', // Match the chat area width (w-2/3)
         left: isMobile ? '0' : 'auto', // Remove left positioning on desktop
-        right: '0' // Keep right alignment
+        right: '0', // Keep right alignment
+        backgroundColor: 'rgba(24, 24, 27, 0.85)', // Translucent dark background
+        backdropFilter: 'blur(12px)', // Frosted glass effect
+        WebkitBackdropFilter: 'blur(12px)' // Safari support
       }}
     >
       {/* Camera/Plus Button - Apple style */}
@@ -67,7 +70,9 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
       </button>
       
       <div 
-        className="flex-1 bg-lsecondary text-white flex items-center rounded-[20px] px-3 md:px-6 py-2 md:py-4 border-2 border-transparent focus-within:border-iblue transition-all duration-200"
+        className={`flex-1 bg-lsecondary text-white flex items-center rounded-[20px] px-3 md:px-6 py-2 md:py-4 border-2 transition-all duration-200 ${
+          isDefaultMessage ? 'message-bar-pulse border-iblue' : 'border-transparent focus-within:border-iblue'
+        }`}
         style={{
           minHeight: isDefaultMessage && isMobile ? '80px' : isMobile ? '36px' : '56px',
           alignItems: isDefaultMessage && isMobile ? 'flex-start' : 'center',
@@ -91,7 +96,9 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
             }
           }}
           disabled={isLoading}
-          className="bg-transparent w-full outline-none shimmer-placeholder disabled:opacity-50 text-white placeholder-gray-400 resize-none"
+          className={`bg-transparent w-full outline-none shimmer-placeholder disabled:opacity-50 resize-none ${
+            isDefaultMessage ? 'default-message-glow' : 'text-white'
+          } placeholder-gray-400`}
           rows={isDefaultMessage && isMobile ? 3 : 1}
           style={{ 
             fontSize: isMobile ? '16px' : '22px',
@@ -125,7 +132,9 @@ const MessageBar = ({ onSendMessage, isLoading }) => {
       <button
         type="submit"
         disabled={isLoading || !message.trim()}
-        className="flex justify-center items-center w-7 h-7 md:w-10 md:h-10 rounded-full transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
+        className={`flex justify-center items-center w-7 h-7 md:w-10 md:h-10 rounded-full transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0 ${
+          isDefaultMessage ? 'send-button-shine' : ''
+        }`}
         style={{
           backgroundColor: message.trim() && !isLoading ? '#007AFF' : '#8E8E93',
           alignSelf: 'flex-end',
