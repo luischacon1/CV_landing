@@ -1,28 +1,41 @@
 import "./globals.css";
-import { ModalImageProvider } from "./components/ModalImageContext";
-import ModalImage from "./components/ModalImage";
-// import AnimatedBackground from "./components/AnimatedBackground";
 
 export const metadata = {
-  title: "Luis Chacon",
-  description: "Luis's Personal Website",
-  icons: {
-    icon: "/@luis-favicon.png",
-    apple: "/@luis-favicon.png",
-    shortcut: "/@luis-favicon.png",
+  title: "Luis Fernández Chacón",
+  description:
+    "CEO y cofundador de ICON, Forbes 30 Under 30. Esta web es un chat: escríbeme y te cuento.",
+  openGraph: {
+    title: "Luis Fernández Chacón",
+    description: "CEO y cofundador de ICON, Forbes 30 Under 30. Escríbeme y te cuento.",
+    images: [{ url: "/media/luis-sonrisa.webp", width: 1271, height: 1266 }],
+    locale: "es_ES",
+    type: "profile",
   },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@Luis_fchacon",
+  },
+  icons: {
+    icon: "/luis-favicon.png",
+    apple: "/luis-favicon.png",
+  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="antialiased">
-        {/* <AnimatedBackground /> */}
-        <ModalImageProvider>
-          {children}
-          <ModalImage />
-        </ModalImageProvider>
-      </body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
   );
 }

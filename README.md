@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# luis.chat
 
-## Getting Started
+Web personal de Luis Fernández Chacón con interfaz de iMessage: el visitante chatea con Luis,
+va descubriendo capítulos con fotos (ICON, Forbes, Google, el podcast…) y una IA con su contexto
+responde a lo que no está guionizado.
 
-First, run the development server:
+## Arrancar
 
 ```bash
+npm install
+cp .env.example .env.local   # pon tu OPENAI_API_KEY
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Dónde está cada cosa
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `src/app/content/chapters.js` — el guion: intro y capítulos (textos, fotos, enlaces, vídeo).
+- `src/app/content/profile.js` — nombre, foto, enlaces, email.
+- `src/app/api/chat/prompt.js` — lo que sabe la IA sobre Luis. Actualízalo cuando pase algo nuevo.
+- `src/app/api/chat/route.js` — llamada a OpenAI en streaming con historial.
+- `src/app/components/` — `Chat` (orquestación), `Message`, `Composer`, `Sidebar`, `Lightbox`.
+- `public/media/` — fotos optimizadas (WebP ≤1400px) y el reel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variables de entorno
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `OPENAI_API_KEY` — obligatoria para que la IA responda.
+- `OPENAI_MODEL` — opcional, por defecto `gpt-5-mini`.
