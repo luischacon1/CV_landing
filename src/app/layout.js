@@ -3,10 +3,10 @@ import "./globals.css";
 export const metadata = {
   title: "Luis Fernández Chacón",
   description:
-    "CEO y cofundador de ICON, Forbes 30 Under 30. Esta web es un chat: escríbeme y te cuento.",
+    "Esta web es un chat conmigo. Pregúntame lo que quieras y te cuento.",
   openGraph: {
     title: "Luis Fernández Chacón",
-    description: "CEO y cofundador de ICON, Forbes 30 Under 30. Escríbeme y te cuento.",
+    description: "Esta web es un chat conmigo. Pregúntame lo que quieras y te cuento.",
     images: [{ url: "/media/luis-sonrisa.webp", width: 1271, height: 1266 }],
     locale: "es_ES",
     type: "profile",

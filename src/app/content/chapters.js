@@ -2,6 +2,9 @@
 // toca una sugerencia (o escribe algo muy parecido). Los mensajes de Luis
 // se van "escribiendo" uno a uno con el indicador de escritura entre medias.
 //
+// Tono: humilde, de pasada. Las cosas se cuentan porque vienen a cuento,
+// no para presumir. El mérito, cuando lo hay, es de otros o de la suerte.
+//
 // Tipos de mensaje: text | photos | video | link | contact
 
 const P = (name, w, h, alt) => ({ src: `/media/${name}.webp`, w, h, alt });
@@ -12,15 +15,15 @@ export const intro = [
   { kind: "photos", photos: [P("luis-retrato", 933, 1400, "Luis, retrato")] },
   {
     kind: "text",
-    text: "ahora mismo soy CEO y cofundador de ICON, una escuela de negocios para la industria del entretenimiento. este verano salí en la lista Forbes 30 Under 30 y estoy terminando la carrera. todo a la vez, sí",
+    text: "no sé muy bien cómo has llegado aquí, pero gracias por entrar. esto es un chat conmigo: puedes preguntarme lo que quieras o tocar alguna de las sugerencias de abajo",
   },
   {
     kind: "text",
-    text: "esta web es un chat conmigo. pregúntame lo que quieras o toca una de las sugerencias de abajo",
+    text: "ahora mismo estoy con ICON, una escuela para la industria de la música que montamos entre varios, y terminando la carrera. de todo lo demás te cuento si te apetece",
   },
   {
     kind: "text",
-    text: "(te contesta una IA entrenada con mi contexto. responde casi igual que yo, pero no se cansa)",
+    text: "(te contesta una IA con mi contexto. acierta bastante, aunque a veces me deja mejor de lo que soy)",
   },
 ];
 
@@ -28,18 +31,18 @@ export const chapters = [
   {
     id: "icon",
     chip: "¿Qué es ICON?",
-    row: { title: "ICON", preview: "la escuela de negocios del entretenimiento" },
+    row: { title: "ICON", preview: "una escuela para la industria de la música" },
     messages: [
-      { kind: "text", text: "ICON es una escuela de negocios para la industria del entretenimiento. formamos a la gente que quiere trabajar en música, no a los que quieren ser famosos" },
+      { kind: "text", text: "ICON es una escuela para la gente que quiere trabajar en la industria de la música: management, discográficas, directo, derechos. lo que no se enseña en ningún sitio" },
       {
         kind: "text",
-        text: "tenemos un Curso Superior en Music Business avalado por la Universidad Nebrija y un claustro de más de 80 profesionales en activo: managers, ejecutivos de discográficas, artistas, abogados, promotores",
+        text: "la idea es sencilla: que las clases las den los que están dentro. hoy son más de 80 profesionales en activo, y el curso de Music Business lo avala la Universidad Nebrija. yo me encargo sobre todo de que todo eso funcione",
       },
       { kind: "photos", photos: [P("grammy", 1050, 1400, "Luis en los Latin Grammy"), P("rodaje", 1050, 1400, "Grabando a un mentor de ICON")] },
-      { kind: "text", text: "esto es de Miami, grabando clases con mentores durante los Latin Grammy. hay días en este trabajo que no parecen trabajo" },
+      { kind: "text", text: "esto es en Miami, grabando clases con algunos mentores mientras estaban por allí por los Latin Grammy. yo iba de cargar trípodes, básicamente" },
       {
         kind: "text",
-        text: "lo arrancamos en septiembre de 2025 mientras yo seguía en TikTok Shop. lo cofundé con Pau Rebollo, que viene del mundo de los shows y los eventos, y hoy es mi socio en todo esto",
+        text: "lo empezamos en septiembre de 2025, a ratos, mientras yo seguía trabajando en TikTok. mi socio es Pau Rebollo, que lleva toda la vida en los shows y los eventos y sabe de esto mucho más que yo",
       },
       {
         kind: "link",
@@ -57,10 +60,10 @@ export const chapters = [
   {
     id: "forbes",
     chip: "Lo de Forbes",
-    row: { title: "Forbes 30 Under 30", preview: "julio de 2026, todavía lo estoy procesando", image: "/media/luis-escenario.webp" },
+    row: { title: "Forbes 30 Under 30", preview: "todavía no sé muy bien cómo", image: "/media/luis-escenario.webp" },
     messages: [
-      { kind: "text", text: "en julio de 2026 Forbes España me incluyó en su lista 30 Under 30 junto a Pau, por ICON" },
-      { kind: "text", text: "me enteré estando en Dublín. no sabía muy bien qué hacer con esa información, así que me fui a trabajar" },
+      { kind: "text", text: "sí, este verano Forbes España nos metió a Pau y a mí en su lista 30 Under 30 por ICON" },
+      { kind: "text", text: "me enteré en Dublín, entre semana. no supe muy bien qué hacer con la noticia, así que me fui a trabajar" },
       {
         kind: "link",
         link: {
@@ -70,29 +73,29 @@ export const chapters = [
           description: "Los 30 jóvenes menores de 30 años que están marcando el futuro.",
         },
       },
-      { kind: "text", text: "lo que más ilusión me hizo fue que reconocieran a ICON. llevamos un año enseñándole a la industria que se puede formar bien sin un máster de 30.000 €" },
+      { kind: "text", text: "lo bonito es que es un reconocimiento a ICON y a toda la gente que está dentro, que es mucha. yo solo soy el que sale en la foto" },
     ],
   },
   {
     id: "google",
     chip: "Google y TikTok",
-    row: { title: "Google · TikTok Shop", preview: "dos años en big tech y una decisión" },
+    row: { title: "Google · TikTok Shop", preview: "dos trabajos que me enseñaron mucho" },
     messages: [
-      { kind: "text", text: "pasé un año en TikTok Shop España como account manager. onboarding de vendedores, campañas, visitas por toda España. en dos meses metí a más de 30 sellers en la plataforma" },
-      { kind: "text", text: "después me fui a Google, a Dublín, al equipo de New Business Sales para el mercado de UK. julio a septiembre de 2026" },
+      { kind: "text", text: "estuve un año en TikTok Shop España ayudando a pequeñas marcas a vender en la plataforma. onboarding, campañas, visitas. aprendí a vender de verdad, que es distinto de lo que uno se imagina" },
+      { kind: "text", text: "después pasé el verano de 2026 en Google, en Dublín, en el equipo de ventas para el mercado de UK. tres meses muy intensos" },
       { kind: "photos", photos: [P("google-hq", 1050, 1400, "Luis en la sede de Google"), P("google-inside", 1050, 1400, "Dentro de las oficinas de Google"), P("meta-hq", 1050, 1400, "Luis en la sede de Meta")] },
-      { kind: "text", text: "estas son de antes, de la primera vez que pisé Silicon Valley. una noche de fiesta en San Francisco acabó con dos españoles enseñándome las oficinas de Meta y Google. gracias Guille y Jaime" },
-      { kind: "text", text: "podía haberme quedado en Google. dije que no" },
-      { kind: "text", text: "con veintipocos años tenía dos opciones: una carrera cómoda en una de las mejores empresas del mundo, o apostarlo todo a ICON. elegí la segunda. de momento no me arrepiento (pregúntame en cinco años)" },
+      { kind: "text", text: "estas son de mucho antes, de la primera vez que pisé Silicon Valley. una noche en San Francisco conocí a dos españoles en una cola, Guille y Jaime, y al día siguiente me estaban enseñando las oficinas de Meta y Google. la gente buena es lo mejor que te puede pasar" },
+      { kind: "text", text: "al acabar en Google tuve que elegir entre seguir por ahí o volver a Madrid y dedicarme a ICON del todo. elegí volver" },
+      { kind: "text", text: "no sé si fue lo más listo. de momento es lo que me hace levantarme con ganas, que ya es bastante" },
     ],
   },
   {
     id: "inedito",
     chip: "El podcast",
-    row: { title: "Inédito Podcast", preview: "70 episodios, 45.000 suscriptores", image: "/media/inedito-logo.png" },
+    row: { title: "Inédito Podcast", preview: "un año entrevistando a gente que sabía más que yo", image: "/media/inedito-logo.png" },
     messages: [
-      { kind: "text", text: "entre 2023 y 2024 hice Inédito, un podcast de entrevistas. más de 70 episodios, 45.000 suscriptores en YouTube y 20 millones de visualizaciones" },
-      { kind: "text", text: "idea, entrevistas, edición. todo yo. dormir era opcional" },
+      { kind: "text", text: "entre 2023 y 2024 hice un podcast que se llamaba Inédito. la excusa era sentarme con gente que me interesaba y hacerle preguntas" },
+      { kind: "text", text: "lo grababa y lo editaba yo, así que si ves un corte raro ya sabes de quién es la culpa. se juntaron más de 70 episodios y, no sé muy bien por qué, bastante gente al otro lado" },
       {
         kind: "link",
         link: {
@@ -123,43 +126,43 @@ export const chapters = [
           image: "https://img.youtube.com/vi/MyKKtZf5z1w/hqdefault.jpg",
         },
       },
-      { kind: "text", text: "también pasaron Carlos Latre, Belén Esteban y la hormiga de El Hormiguero. un podcast serio, como ves" },
+      { kind: "text", text: "también pasaron Carlos Latre, Belén Esteban y la hormiga de El Hormiguero. me lo pasé muy bien, que al final era de lo que iba" },
     ],
   },
   {
     id: "escenarios",
     chip: "¿Hablas en público?",
-    row: { title: "Escenarios", preview: "del Parlamento Europeo a los institutos" },
+    row: { title: "Escenarios", preview: "una vez en Bruselas y muchas en institutos" },
     messages: [
-      { kind: "text", text: "con 18 años me invitaron a hablar en el Parlamento Europeo sobre emprendimiento joven" },
+      { kind: "text", text: "con 18 años me invitaron a hablar en el Parlamento Europeo sobre emprendimiento joven. sigo sin tener claro por qué a mí" },
       { kind: "photos", photos: [P("parlamento-1", 1400, 1093, "Luis interviniendo en el Parlamento Europeo"), P("parlamento-2", 1400, 1119, "Luis en la pantalla del Parlamento Europeo")] },
-      { kind: "text", text: "sigo sin saber muy bien cómo pasó" },
-      { kind: "text", text: "lo que más me gusta, de verdad, es ir a institutos. contarle a chavales de 16 años que no hace falta pedir permiso para empezar" },
+      { kind: "text", text: "hablé poco y escuché mucho, que creo que es lo que tocaba" },
+      { kind: "text", text: "lo que de verdad me gusta es ir a institutos. contarles a chavales de 16 años que yo era como ellos hace nada y que no hace falta pedir permiso para empezar algo" },
       { kind: "photos", photos: [P("charla-2", 1400, 1050, "Charla en un instituto"), P("charla-1", 1062, 958, "Luis en el escenario"), P("luis-micro", 933, 1400, "Luis con micrófono")] },
     ],
   },
   {
     id: "antes",
     chip: "¿Y antes de todo esto?",
-    row: { title: "Antes de ICON", preview: "Skill Hunting, hackathons y un campamento" },
+    row: { title: "Antes de ICON", preview: "una comunidad, un hackathon y un campamento" },
     messages: [
-      { kind: "text", text: "con 18 cofundé Skill Hunting, una comunidad de emprendedores jóvenes. organizamos más de 10 eventos, llegamos a 25.000 seguidores y generamos más de 50.000 € con patrocinios" },
+      { kind: "text", text: "con 18 montamos entre unos cuantos amigos Skill Hunting, una comunidad de gente joven con ganas de emprender. hicimos bastantes eventos y se juntó mucha más gente de la que esperábamos" },
       { kind: "photos", photos: [P("skh-publico", 800, 533, "Público en un evento de Skill Hunting"), P("skh-cheque", 800, 532, "Entrega de cheque en Skill Hunting")] },
-      { kind: "text", text: "ese día fue de los mejores de mi vida" },
-      { kind: "text", text: "mi primer hackathon: me quedé en blanco en mitad del pitch. ganamos igual, no me preguntes cómo" },
+      { kind: "text", text: "ese día fue de los mejores que recuerdo. no por el cheque, por la sala llena" },
+      { kind: "text", text: "mi primer hackathon lo recuerdo sobre todo porque me quedé en blanco en mitad del pitch. ganamos igual, gracias a mi equipo, que tiró del carro mientras yo recuperaba el habla" },
       { kind: "photos", photos: [P("hackathon-1", 800, 533, "Hackathon"), P("hackathon-2", 800, 533, "Hackathon, pitch"), P("hackathon-3", 800, 533, "Hackathon, equipo")] },
-      { kind: "text", text: "y en 2024 llevé la producción de No Suspires, el campamento de Pedro Buerbaum. lo más intenso que he liderado" },
+      { kind: "text", text: "y en 2024 me tocó llevar la producción de No Suspires, el campamento de Pedro Buerbaum. dormí poco y aprendí mucho" },
       { kind: "video", video: { src: "/media/reel.mp4", poster: "/media/reel-poster.jpg", w: 720, h: 1280 } },
-      { kind: "text", text: "también estuve un año en Spine Consulting cerrando clientes B2B y otro en Influence Hub con marketing de influencers. de todo se aprende, sobre todo a vender" },
+      { kind: "text", text: "también pasé un año en Spine Consulting vendiendo a pymes y otro en Influence Hub con marketing de influencers. trabajos normales, de los que te enseñan cómo funcionan las cosas" },
     ],
   },
   {
     id: "estudios",
     chip: "¿Qué estudias?",
-    row: { title: "Universidad", preview: "UC3M, un año en California", image: "/media/hawaii-1.webp" },
+    row: { title: "Universidad", preview: "UC3M, y un año en California", image: "/media/hawaii-1.webp" },
     messages: [
-      { kind: "text", text: "doble grado en Estudios Internacionales y Administración de Empresas en la Carlos III de Madrid. me quedan los últimos TFGs, los escribo a ratos entre reuniones" },
-      { kind: "text", text: "pasé un año de intercambio en California, en UC Irvine. allí monté Apex, un proyecto de healthtech con el que llegamos a la final de una venture competition" },
+      { kind: "text", text: "doble grado en Estudios Internacionales y Administración de Empresas en la Carlos III. me quedan los últimos trabajos de fin de grado, que escribo a ratos cuando ICON me deja" },
+      { kind: "text", text: "pasé un año de intercambio en California, en UC Irvine. allí me metí con unos compañeros en un proyecto de salud que llegó a la final de una competición de la universidad. salió mejor de lo que merecíamos" },
       {
         kind: "link",
         link: {
@@ -171,7 +174,7 @@ export const chapters = [
         },
       },
       { kind: "photos", photos: [P("hawaii-1", 788, 1400, "Momentos antes de saltar en paracaídas en Hawái"), P("hawaii-2", 1050, 1400, "Luis con amigos en Hawái")] },
-      { kind: "text", text: "esto es segundos antes de tirarme de un avión en Hawái. lloré. no me arrepiento" },
+      { kind: "text", text: "esto es segundos antes de tirarme de un avión en Hawái. lloré bastante. lo cuento para que sepas que no soy tan valiente" },
     ],
   },
   {
@@ -179,13 +182,14 @@ export const chapters = [
     chip: "Cuéntame algo personal",
     row: { title: "Fuera del trabajo", preview: "familia, Sevilla FC y mucha bici" },
     messages: [
-      { kind: "text", text: "nací en un pueblo de Badajoz pero mi familia es andaluza, así que me siento andaluz. soy del Sevilla y me gusta el flamenco. en mi casa te llaman a la mesa con un «mi arma»" },
-      { kind: "text", text: "si quieres conocerme tienes que conocerlos a ellos primero" },
+      { kind: "text", text: "nací en un pueblo de Badajoz, pero mi familia es de Andalucía y me siento de allí. soy del Sevilla y me gusta el flamenco. en mi casa te llaman a la mesa con un «mi arma»" },
+      { kind: "text", text: "si de verdad quieres conocerme, tienes que conocerlos a ellos" },
       { kind: "photos", photos: [P("hermano", 1400, 1050, "Luis con su hermano de pequeños"), P("abuela", 1400, 1050, "Luis con su abuela"), P("greta", 1072, 1400, "Greta, la perra de Luis")] },
-      { kind: "text", text: "mi hermano, mi abuela y Greta" },
+      { kind: "text", text: "mi hermano, mi abuela y Greta. lo mejor que tengo" },
       { kind: "photos", photos: [P("bici", 1050, 1400, "Bici al atardecer"), P("surf", 1050, 1400, "Luis con una tabla de surf"), P("cima", 1050, 1400, "Luis en la cima de una montaña")] },
-      { kind: "text", text: "cuando no estoy trabajando estoy encima de una bici, en el agua o subiendo algo. y en la feria, claro" },
+      { kind: "text", text: "cuando no estoy trabajando estoy encima de una bici, en el agua o subiendo algún cerro. se me da regular todo, pero me lo paso muy bien" },
       { kind: "photos", photos: [P("feria-amigos", 1400, 946, "Luis con amigos en la feria")] },
+      { kind: "text", text: "y en la feria, claro" },
     ],
   },
   {
@@ -193,10 +197,10 @@ export const chapters = [
     chip: "¿Hablamos?",
     row: { title: "Contacto", preview: "email, LinkedIn y X" },
     messages: [
-      { kind: "text", text: "si quieres montar algo, colaborar con ICON o simplemente charlar, escríbeme. contesto rápido y hago muchas preguntas" },
+      { kind: "text", text: "si quieres montar algo, colaborar con ICON o simplemente charlar un rato, escríbeme. contesto rápido y pregunto mucho, aviso" },
       { kind: "contact" },
       { kind: "photos", photos: [P("luis-gafas", 1400, 1163, "Luis con gafas de sol")] },
-      { kind: "text", text: "nos vemos pronto 🙌" },
+      { kind: "text", text: "gracias por llegar hasta aquí 🙌" },
     ],
   },
 ];
