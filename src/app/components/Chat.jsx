@@ -4,6 +4,7 @@ import Message from "./Message";
 import Lightbox from "./Lightbox";
 import Sidebar from "./Sidebar";
 import Composer from "./Composer";
+import ThemeToggle from "./ThemeToggle";
 import { profile } from "../content/profile";
 import { intro, chapters, chapterById } from "../content/chapters";
 
@@ -281,12 +282,15 @@ export default function Chat() {
               <path d="M9 5l7 7-7 7" />
             </svg>
           </span>
-          <a className="navbar-side right" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Luis">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M12 11v5M12 8v.5" />
-            </svg>
-          </a>
+          <span className="navbar-side right">
+            <ThemeToggle />
+            <a className="theme-toggle" href={profile.links.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Luis" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 11v5M12 8v.5" />
+              </svg>
+            </a>
+          </span>
         </header>
 
         <div className="messages" ref={listRef} onScroll={onScroll} role="log" aria-live="polite" aria-relevant="additions">

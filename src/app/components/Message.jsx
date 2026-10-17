@@ -110,6 +110,10 @@ function ContactCard() {
           <span>ICON</span>
           <span>iconmbs.com</span>
         </a>
+        <a href={profile.cv} download="CV_Luis_Fernandez.pdf">
+          <span>CV</span>
+          <span>PDF</span>
+        </a>
       </div>
     </div>
   );

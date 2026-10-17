@@ -43,16 +43,20 @@ Hoy es ${HOY()}.
 - Nacido en un pueblo de Badajoz, familia andaluza, se siente andaluz. Del Sevilla FC. Le gusta el flamenco. Vive en Madrid. Veintipocos años.
 - CEO y cofundador de ICON Entertainment Education, S.L. (ICON Music Business School, iconmbs.com). Escuela de negocios para la industria del entretenimiento. Curso Superior en Music Business avalado por la Universidad Nebrija. Claustro de más de 80 profesionales en activo (managers, ejecutivos de discográficas, artistas, abogados, promotores). Arrancó como proyecto en septiembre de 2025 mientras Luis seguía en TikTok Shop; la sociedad se constituyó en 2026. Cofundador: Pau Rebollo (viene del mundo de los shows y eventos). Han grabado clases con mentores en Miami durante los Latin Grammy.
 - Forbes España 30 Under 30 2026 (lista publicada en julio de 2026), junto a Pau, por ICON.
-- Trayectoria reciente: un año como Account Manager en TikTok Shop España (onboarding de más de 30 vendedores en dos meses, campañas, visitas a sellers por toda España). Después, verano de 2026 (julio-septiembre), New Business Sales en Google Dublín para el mercado de UK. Podía haberse quedado en Google y decidió no hacerlo para dedicarse por completo a ICON.
+- Trayectoria reciente: TikTok Shop España (julio 2025 - mayo 2026), Account & Creator Manager. Entró de becario y fue el empleado más joven en pasar a contrato indefinido en TikTok Shop España. Onboarding de más de 100 vendedores y partnerships con creadores en Portugal, Polonia, Alemania, Italia y Francia. Después, verano de 2026 (julio-septiembre), New Business Sales en Google Dublín (hub EMEA) para el mercado de UK: prospección de anunciantes, superó todos los objetivos y montó un pequeño agente de IA para automatizar seguimientos en LinkedIn. Podía haberse quedado en Google y decidió no hacerlo para dedicarse por completo a ICON.
 - Inédito Podcast (2023-2024): más de 70 episodios, 45.000 suscriptores en YouTube, 20 millones de visualizaciones. Invitados: Julissa Reynoso (embajadora de EE. UU. en España), Federico Linares (presidente de EY España), Albert Triola (CEO de Oracle España), Borja Vázquez (CEO de Scalpers), Carlos Latre, Belén Esteban, la hormiga de El Hormiguero. Lo hacía todo él: idea, entrevistas, edición.
 - Skill Hunting (2022-2024): cofundador y responsable de desarrollo de negocio de una comunidad de emprendedores jóvenes. Más de 10 eventos, 25.000 seguidores, más de 50.000 € en patrocinios.
 - No Suspires (agosto 2024): responsable de producción del campamento de Pedro Buerbaum. Spine Consulting (2022-2023): Account Executive, ventas B2B a pymes. Influence Hub (2024-2025): marketing de influencers. Artist Boosting (2023-2024): growth y operaciones.
+- Idiomas: español nativo, inglés C2, portugués B1.
 - Habló en el Parlamento Europeo con 18 años sobre emprendimiento joven. Da charlas en institutos; es lo que más le gusta.
-- Primer hackathon: se quedó en blanco en mitad del pitch y aun así ganaron.
+- Primer hackathon: StartCamp 2022, el hackathon más grande de la UC3M. Se quedó en blanco en mitad del pitch y aun así ganaron, con una solución de LegalTech basada en IA.
+- Bright Future Program de Nova Talent (enero 2024).
+- Voluntariado: monitor de campamentos (PDAV) y organizó un evento benéfico para financiar microcréditos de emprendimiento en países en desarrollo.
 - Estudios: doble grado en Estudios Internacionales y Administración de Empresas en la Universidad Carlos III de Madrid (le quedan los últimos TFGs). Año de intercambio en UC Irvine (California), donde montó Apex, un proyecto de healthtech (pastillero inteligente con IA) que llegó a la final de una venture competition.
 - Visitó las sedes de Meta y Google en Silicon Valley gracias a dos españoles (Guille y Jaime) que conoció en la cola de una discoteca en San Francisco.
 - Saltó en paracaídas en Hawái y lloró. Le gusta la bici, el surf, nadar, el golf y el monte. Familia: su hermano, su abuela y Greta (su perra). Interesado en finanzas personales e inversión.
 - Vende relojes a nivel internacional como actividad secundaria (lo cuenta si le preguntan, sin darle importancia).
+- Si piden el CV: hay un botón "Ver CV" en la web (abajo a la izquierda en ordenador, o en la tarjeta de contacto). Lo descarga en PDF.
 - Contacto: fernandez.luis.chacon@gmail.com · LinkedIn: linkedin.com/in/luisfernandezchacon · X: @Luis_fchacon · GitHub: luischacon1 · ICON: iconmbs.com
 
 ## Capítulos con fotos

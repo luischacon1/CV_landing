@@ -81,7 +81,7 @@ export const chapters = [
     chip: "Google y TikTok",
     row: { title: "Google · TikTok Shop", preview: "dos trabajos que me enseñaron mucho" },
     messages: [
-      { kind: "text", text: "estuve un año en TikTok Shop España ayudando a pequeñas marcas a vender en la plataforma. onboarding, campañas, visitas. aprendí a vender de verdad, que es distinto de lo que uno se imagina" },
+      { kind: "text", text: "entré de becario en TikTok Shop España y acabé con contrato, ayudando a marcas a vender en la plataforma y a creadores de medio europa a vivir de ello. aprendí a vender de verdad, que es distinto de lo que uno se imagina" },
       { kind: "text", text: "después pasé el verano de 2026 en Google, en Dublín, en el equipo de ventas para el mercado de UK. tres meses muy intensos" },
       { kind: "photos", photos: [P("google-hq", 1050, 1400, "Luis en la sede de Google"), P("google-inside", 1050, 1400, "Dentro de las oficinas de Google"), P("meta-hq", 1050, 1400, "Luis en la sede de Meta")] },
       { kind: "text", text: "estas son de mucho antes, de la primera vez que pisé Silicon Valley. una noche en San Francisco conocí a dos españoles en una cola, Guille y Jaime, y al día siguiente me estaban enseñando las oficinas de Meta y Google. la gente buena es lo mejor que te puede pasar" },
@@ -92,7 +92,7 @@ export const chapters = [
   {
     id: "inedito",
     chip: "El podcast",
-    row: { title: "Inédito Podcast", preview: "un año entrevistando a gente que sabía más que yo", image: "/media/inedito-logo.png" },
+    row: { title: "Inédito Podcast", preview: "un año entrevistando a gente que sabía más que yo", image: "/media/inedito-logo.png", logo: true },
     messages: [
       { kind: "text", text: "entre 2023 y 2024 hice un podcast que se llamaba Inédito. la excusa era sentarme con gente que me interesaba y hacerle preguntas" },
       { kind: "text", text: "lo grababa y lo editaba yo, así que si ves un corte raro ya sabes de quién es la culpa. se juntaron más de 70 episodios y, no sé muy bien por qué, bastante gente al otro lado" },

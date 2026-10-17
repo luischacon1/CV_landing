@@ -6,6 +6,7 @@ export const profile = {
   role: "CEO y cofundador de ICON",
   avatar: { src: "/media/luis-sonrisa.webp", w: 1271, h: 1266 },
   email: "fernandez.luis.chacon@gmail.com",
+  cv: "/CV_Luis_Fernandez.pdf",
   links: {
     linkedin: "https://linkedin.com/in/luisfernandezchacon",
     x: "https://x.com/Luis_fchacon",

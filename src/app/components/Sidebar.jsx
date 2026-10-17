@@ -67,7 +67,7 @@ export default function Sidebar({ seen, current, onPick }) {
               aria-current={current === c.id}
               onClick={() => onPick(c.id)}
             >
-              <span className={`row-avatar${img ? "" : " mono"}`}>
+              <span className={`row-avatar${img ? "" : " mono"}${c.row.logo ? " logo" : ""}`}>
                 {img ? <img src={img} alt="" /> : c.row.title[0]}
               </span>
               <span className="row-text">
@@ -88,6 +88,7 @@ export default function Sidebar({ seen, current, onPick }) {
         <a href={profile.links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href={profile.links.icon} target="_blank" rel="noopener noreferrer">ICON</a>
         <a href={`mailto:${profile.email}`}>Email</a>
+        <a href={profile.cv} download="CV_Luis_Fernandez.pdf">Ver CV</a>
       </div>
     </aside>
   );
