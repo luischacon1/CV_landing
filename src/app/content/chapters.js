@@ -60,9 +60,10 @@ export const chapters = [
   {
     id: "forbes",
     chip: "Lo de Forbes",
-    row: { title: "Forbes 30 Under 30", preview: "todavía no sé muy bien cómo", image: "/media/luis-escenario.webp" },
+    row: { title: "Forbes 30 Under 30", preview: "todavía no sé muy bien cómo", image: "/media/forbes.webp" },
     messages: [
       { kind: "text", text: "sí, este verano Forbes España nos metió a Pau y a mí en su lista 30 Under 30 por ICON" },
+      { kind: "photos", photos: [P("forbes", 1330, 1400, "Pau Rebollo y Luis Fernández Chacón en la ficha de Forbes 30 Under 30 2026")] },
       { kind: "text", text: "me enteré en Dublín, entre semana. no supe muy bien qué hacer con la noticia, así que me fui a trabajar" },
       {
         kind: "link",
