@@ -4,7 +4,9 @@ import { getSystemPrompt } from "./prompt";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// Modelo por defecto y alternativa si el primero no existe en la cuenta.
 const MODEL = process.env.OPENAI_MODEL || "gpt-5-mini";
+const FALLBACK_MODEL = "gpt-5.4-mini";
 const MAX_HISTORY = 16;
 const MAX_CHARS = 1200;
 
@@ -48,9 +50,19 @@ export async function POST(request) {
   try {
     stream = await openai.chat.completions.create(params);
   } catch (err) {
-    console.error("openai error", err?.status, err?.message);
-    const status = err?.status === 401 ? 401 : 502;
-    return Response.json({ error: "upstream" }, { status });
+    const notFound = err?.status === 404 || /model/i.test(err?.message || "") && /not (found|exist)|does not exist/i.test(err?.message || "");
+    if (notFound && params.model !== FALLBACK_MODEL) {
+      try {
+        stream = await openai.chat.completions.create({ ...params, model: FALLBACK_MODEL });
+      } catch (err2) {
+        console.error("openai error (fallback)", err2?.status, err2?.message);
+        return Response.json({ error: "upstream" }, { status: 502 });
+      }
+    } else {
+      console.error("openai error", err?.status, err?.message);
+      const status = err?.status === 401 ? 401 : 502;
+      return Response.json({ error: "upstream" }, { status });
+    }
   }
 
   const encoder = new TextEncoder();
