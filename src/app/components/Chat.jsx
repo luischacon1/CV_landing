@@ -142,7 +142,29 @@ export default function Chat() {
         return fail(`esta parte todavía no está conectada. escríbeme a ${profile.email} y te contesto yo de verdad`);
       if (!res.ok || !res.body) return fail("algo ha fallado por mi lado. inténtalo de nuevo, o escríbeme al email");
 
-      const id = nextId();
+      // Las burbujas se van creando según llega el texto: cada párrafo
+      // (línea en blanco) es un mensaje nuevo, como si Luis los enviara uno a uno.
+      const ids = [];
+      const at = timeNow();
+      const splitParts = (txt) => txt.split(/\n\s*\n/).map((x) => x.trim()).filter(Boolean);
+      const render = (txt, streaming) => {
+        const parts = splitParts(txt);
+        if (!parts.length) parts.push("");
+        while (ids.length < parts.length) ids.push(nextId());
+        setThread((t) => {
+          const kept = t.filter((m) => !ids.includes(m.id));
+          const bubbles = parts.map((text, k) => ({
+            id: ids[k],
+            at,
+            from: "luis",
+            kind: "text",
+            text,
+            streaming: streaming && k === parts.length - 1,
+          }));
+          return [...kept, ...bubbles];
+        });
+      };
+
       let full = "";
       let first = true;
       const reader = res.body.getReader();
@@ -157,10 +179,9 @@ export default function Chat() {
             first = false;
             await sleep(Math.max(0, 700 - (Date.now() - started)));
             setTyping(false);
-            setThread((t) => [...t, { id, at: timeNow(), from: "luis", kind: "text", text: "", streaming: true }]);
           }
-          const visible = full.replace(/\s*\[\[chapter:[^\]]*\]\]\s*$/i, "");
-          setThread((t) => t.map((m) => (m.id === id ? { ...m, text: visible } : m)));
+          const visible = full.replace(/\s*\[\[chapter:[^\]]*\]\]\s*$/i, "").replace(/\s*\[\[chap?t?e?r?:?[a-z]*$/i, "");
+          render(visible, true);
         }
       } catch {
         /* se corta la conexión: lo que haya llegado se queda */
@@ -170,21 +191,7 @@ export default function Chat() {
 
       const tag = full.match(/\[\[chapter:([a-z]+)\]\]/i);
       const clean = full.replace(/\s*\[\[chapter:[^\]]*\]\]\s*/gi, "").trim();
-      const parts = clean.split(/\n\s*\n/).map((s) => s.trim()).filter(Boolean);
-
-      setThread((t) => {
-        const i = t.findIndex((m) => m.id === id);
-        if (i < 0) return t;
-        const at = t[i].at;
-        const bubbles = (parts.length ? parts : [clean]).map((text, k) => ({
-          id: k === 0 ? id : nextId(),
-          at,
-          from: "luis",
-          kind: "text",
-          text,
-        }));
-        return [...t.slice(0, i), ...bubbles, ...t.slice(i + 1)];
-      });
+      render(clean, false);
 
       const chapterId = tag?.[1]?.toLowerCase();
       if (chapterId && chapterById[chapterId] && !seenRef.current.includes(chapterId)) {
