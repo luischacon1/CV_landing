@@ -79,12 +79,14 @@ export const chapters = [
   {
     id: "google",
     chip: "Google y TikTok",
-    row: { title: "Google · TikTok Shop", preview: "dos trabajos que me enseñaron mucho" },
+    row: { title: "Google · TikTok Shop", preview: "dos trabajos que me enseñaron mucho", image: "/media/google-dublin.webp" },
     messages: [
       { kind: "text", text: "entré de becario en TikTok Shop España y acabé con contrato, ayudando a marcas a vender en la plataforma y a creadores de medio europa a vivir de ello. aprendí a vender de verdad, que es distinto de lo que uno se imagina" },
       { kind: "text", text: "después pasé el verano de 2026 en Google, en Dublín, en el equipo de ventas para el mercado de UK. tres meses muy intensos" },
+      { kind: "photos", photos: [P("google-dublin", 1332, 1400, "Luis en la oficina de Google en Dublín, señalando Irlanda en un mapa")] },
+      { kind: "text", text: "por si no quedaba claro dónde estaba" },
       { kind: "photos", photos: [P("google-hq", 1050, 1400, "Luis en la sede de Google"), P("google-inside", 1050, 1400, "Dentro de las oficinas de Google"), P("meta-hq", 1050, 1400, "Luis en la sede de Meta")] },
-      { kind: "text", text: "estas son de mucho antes, de la primera vez que pisé Silicon Valley. una noche en San Francisco conocí a dos españoles en una cola, Guille y Jaime, y al día siguiente me estaban enseñando las oficinas de Meta y Google. la gente buena es lo mejor que te puede pasar" },
+      { kind: "text", text: "estas otras son de mucho antes, de la primera vez que pisé Silicon Valley. una noche en San Francisco conocí a dos españoles en una cola, Guille y Jaime, y al día siguiente me estaban enseñando las oficinas de Meta y Google. la gente buena es lo mejor que te puede pasar" },
       { kind: "text", text: "al acabar en Google tuve que elegir entre seguir por ahí o volver a Madrid y dedicarme a ICON del todo. elegí volver" },
       { kind: "text", text: "no sé si fue lo más listo. de momento es lo que me hace levantarme con ganas, que ya es bastante" },
     ],
