@@ -193,8 +193,8 @@ export const chapters = [
       { kind: "text", text: "mi hermano, mi abuela y Greta. lo mejor que tengo" },
       { kind: "photos", photos: [P("bici", 1050, 1400, "Bici al atardecer"), P("surf", 1050, 1400, "Luis con una tabla de surf"), P("cima", 1050, 1400, "Luis en la cima de una montaña")] },
       { kind: "text", text: "cuando no estoy trabajando estoy encima de una bici, en el agua o subiendo algún cerro. se me da regular todo, pero me lo paso muy bien" },
-      { kind: "photos", photos: [P("feria-amigos", 1400, 946, "Luis con amigos en la feria")] },
-      { kind: "text", text: "y en la feria, claro" },
+      { kind: "photos", photos: [P("feria-sevilla", 1400, 1050, "Luis con amigos en una caseta de la Feria de Sevilla"), P("feria-amigos", 1400, 946, "Luis con amigos en la feria")] },
+      { kind: "text", text: "y en la Feria de Sevilla, claro. con rebujito y los de siempre" },
     ],
   },
   {
