@@ -85,6 +85,8 @@ export const chapters = [
     row: { title: "Google · TikTok Shop", preview: "dos trabajos que me enseñaron mucho", image: "/media/google-dublin.webp" },
     messages: [
       { kind: "text", text: "entré de becario en TikTok Shop España y acabé con contrato, ayudando a marcas a vender en la plataforma y a creadores de medio europa a vivir de ello. aprendí a vender de verdad, que es distinto de lo que uno se imagina" },
+      { kind: "video", video: { src: "/media/tiktok-alemania.mp4", poster: "/media/tiktok-alemania-poster.jpg", w: 406, h: 720 } },
+      { kind: "text", text: "esto es el almacén de un vendedor en alemania. en once meses me dejaron recorrer seis países yo solo, visitando a vendedores y creadores. la mayoría de las cosas que salieron bien allí empezaron con un café en sitios como este" },
       { kind: "text", text: "después pasé el verano de 2026 en Google, en Dublín, en el equipo de ventas para el mercado de UK. tres meses muy intensos" },
       { kind: "photos", photos: [P("google-dublin", 1332, 1400, "Luis en la oficina de Google en Dublín, señalando Irlanda en un mapa")] },
       { kind: "text", text: "por si no quedaba claro dónde estaba" },
