@@ -77,6 +77,17 @@ export const chapters = [
         },
       },
       { kind: "text", text: "lo bonito es que es un reconocimiento a ICON y a toda la gente que está dentro, que es mucha. yo solo soy el que sale en la foto" },
+      { kind: "text", text: "en el festival nos sentaron a Pau y a mí en una mesa sobre la nueva economía creativa, con David Camprubí de Newcop. dije que a estas edades hay que decir que sí a todo. luego me arrepentí de haberlo dicho en voz alta" },
+      {
+        kind: "link",
+        link: {
+          url: "https://forbes.es/forbes-30-under-30/967678/la-nueva-economia-creativa-en-forbes-espana-30-under-30-la-primera-vocacion-profesional-de-los-jovenes-es-ser-emprendedor/",
+          domain: "forbes.es",
+          title: "‘La nueva economía creativa’, en Forbes España 30 Under 30",
+          description: "La profesionalización de la industria del entretenimiento y el auge de la economía del creador.",
+          image: "https://forbes.es/wp-content/uploads/2026/06/Diseno-sin-titulo-2026-06-30T113752.566.png",
+        },
+      },
     ],
   },
   {
