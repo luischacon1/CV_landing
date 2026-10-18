@@ -31,15 +31,17 @@ export const chapters = [
   {
     id: "icon",
     chip: "¿Qué es ICON?",
-    row: { title: "ICON", preview: "una escuela para la industria de la música" },
+    row: { title: "ICON", preview: "una escuela para la industria de la música", image: "/media/bisbal-abrazo.webp" },
     messages: [
       { kind: "text", text: "ICON es una escuela para la gente que quiere trabajar en la industria de la música: management, discográficas, directo, derechos. lo que no se enseña en ningún sitio" },
       {
         kind: "text",
         text: "la idea es sencilla: que las clases las den los que están dentro. hoy son más de 80 profesionales en activo, y el curso de Music Business lo avala la Universidad Nebrija. yo me encargo sobre todo de que todo eso funcione",
       },
+      { kind: "photos", photos: [P("bisbal-set", 1400, 933, "David Bisbal grabando una clase en el set de ICON"), P("bisbal-saludo", 933, 1400, "Luis saludando a David Bisbal en el estudio"), P("bisbal-abrazo", 933, 1400, "Luis y David Bisbal abrazándose en el estudio")] },
+      { kind: "text", text: "esto es en el set de ICON, el día que vino David Bisbal a grabar sus clases. yo intentando parecer tranquilo, con poco éxito" },
       { kind: "photos", photos: [P("grammy", 1050, 1400, "Luis en los Latin Grammy"), P("rodaje", 1050, 1400, "Grabando a un mentor de ICON")] },
-      { kind: "text", text: "esto es en Miami, grabando clases con algunos mentores mientras estaban por allí por los Latin Grammy. yo iba de cargar trípodes, básicamente" },
+      { kind: "text", text: "y esto en Miami, grabando con otros mentores mientras estaban por allí por los Latin Grammy. yo iba de cargar trípodes, básicamente" },
       {
         kind: "text",
         text: "lo empezamos en septiembre de 2025, a ratos, mientras yo seguía trabajando en TikTok. mi socio es Pau Rebollo, que lleva toda la vida en los shows y los eventos y sabe de esto mucho más que yo",
